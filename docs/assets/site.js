@@ -42,7 +42,7 @@
     chip.addEventListener('click', function () {
       var f = chip.getAttribute('data-filter');
       chips.forEach(function (c) { var on = c === chip; c.classList.toggle('is-active', on); c.setAttribute('aria-pressed', String(on)); });
-      document.querySelectorAll('.card-row').forEach(function (row) {
+      document.querySelectorAll('.docs-cards .card-row').forEach(function (row) {
         row.hidden = !(f === 'all' || row.getAttribute('data-level') === f);
       });
     });

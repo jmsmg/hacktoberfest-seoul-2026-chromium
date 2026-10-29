@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>코드 카드 (집에서) | Hacktoberfest Seoul · Chromium</title>
+<meta name="description" content="crypto/hash 이전 카드 10장. Chromium 전체 빌드가 필요해서 행사 뒤 집에서 합니다">
+<meta property="og:title" content="코드 카드 (집에서) | Hacktoberfest Seoul · Chromium">
+<meta property="og:description" content="crypto/hash 이전 카드 10장. Chromium 전체 빌드가 필요해서 행사 뒤 집에서 합니다">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="strip" aria-hidden="true"></div>
+  <div class="container header-row">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><span></span></span><span class="brand-text">Hacktoberfest Seoul · Chromium</span></a>
+    <nav class="site-nav" aria-label="주 메뉴"><a href="index.html">가이드</a><a href="cards.html" aria-current="page" class="is-active">이슈 카드</a><a href="troubleshooting.html">막혔을 때</a></nav>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" aria-label="테마 전환"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <a class="gh-pill" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener" aria-label="GitHub 저장소"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></a>
+    </div>
+  </div>
+</header>
+<main id="main" class="container main">
+<div class="doc-layout">
+  <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li><li><a href="code.html" aria-current="page" class="is-active">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
+  <article class="doc">
+    <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li><li><a href="code.html" aria-current="page" class="is-active">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#준비물">준비물</a></li><li class="lv2"><a href="#1단계-받고-빌드-준비">1단계. 받고 빌드 준비</a></li><li class="lv2"><a href="#2단계-카드-고르기">2단계. 카드 고르기</a></li><li class="lv2"><a href="#3단계-고치기">3단계. 고치기</a></li><li class="lv2"><a href="#4단계-빌드하고-테스트">4단계. 빌드하고 테스트</a></li><li class="lv2"><a href="#5단계-커밋과-업로드">5단계. 커밋과 업로드</a></li><li class="lv2"><a href="#6단계-리뷰-요청">6단계. 리뷰 요청</a></li></ul></div></details>
+    <h1 class="page-title">코드 카드 (집에서)</h1>
+    <div class="prose">
+<p>문서 카드를 끝내고 더 해 보고 싶은 분을 위한 카드입니다. Chromium의 옛 해시 함수(<code>crypto/sha2.h</code>, <code>crypto/secure_hash.h</code>)를 새 API(<code>crypto/hash.h</code>)로 바꾸는 일이고, <a href="https://issues.chromium.org/issues/372283556" target="_blank" rel="noopener">이슈 372283556</a> 아래에서 진행 중입니다. 고친 코드를 직접 빌드하고 테스트를 돌려야 해서 <strong>행사장이 아니라 집에서</strong> 합니다. 카드 목록은 <a href="cards.html#집에서-하는-코드-카드">이슈 카드</a> 아래쪽에 있습니다.</p>
+<h2 id="준비물">준비물<a class="anchor" href="#준비물" aria-label="이 절 링크">#</a></h2>
+<ul>
+<li>디스크 100GB 이상, 메모리 16GB 이상. 소스를 받는 데 한두 시간, 첫 빌드에 몇 시간 걸립니다.</li>
+<li>행사 때 받은 <code>src/</code>는 문서 폴더만 받은 것이라 빌드할 수 없습니다. 새로 받습니다.</li>
+<li>받는 방법은 운영체제별 공식 안내를 따릅니다: <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md" target="_blank" rel="noopener">Linux</a> · <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/mac_build_instructions.md" target="_blank" rel="noopener">macOS</a> · <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md" target="_blank" rel="noopener">Windows</a>. 한국어로는 <a href="https://ossca-chromium.github.io/contributions/docs/" target="_blank" rel="noopener">OSSCA Chromium 가이드</a>에 정리돼 있습니다.</li>
+</ul>
+<h2 id="1단계-받고-빌드-준비">1단계. 받고 빌드 준비<a class="anchor" href="#1단계-받고-빌드-준비" aria-label="이 절 링크">#</a></h2>
+<p>공식 안내의 &quot;Get the code&quot;와 &quot;Setting up the build&quot;까지 합니다. <code>out/Default</code>를 만들 때 아래 세 줄을 넣으면 빌드가 빨라집니다.</p>
+<div class="code-block"><pre><code>gn args out/Default   <span class="c"># 편집기가 열리면 아래 세 줄을 넣고 저장</span></code></pre><button type="button" class="copy" data-copy="gn args out/Default">복사</button></div>
+<div class="code-block"><pre><code>is_component_build = true
+symbol_level = 0
+blink_symbol_level = 0</code></pre><button type="button" class="copy" data-copy="is_component_build = true
+symbol_level = 0
+blink_symbol_level = 0">복사</button></div>
+<h2 id="2단계-카드-고르기">2단계. 카드 고르기<a class="anchor" href="#2단계-카드-고르기" aria-label="이 절 링크">#</a></h2>
+<p><a href="cards.html#집에서-하는-코드-카드">이슈 카드</a>에서 하나를 골라 GitHub 카드에 &quot;제가 할게요&quot; 댓글을 남깁니다. <strong>쉬움</strong>은 안 쓰는 include 줄을 지우는 카드, <strong>보통</strong>은 옛 함수 호출 1~2곳을 바꾸는 카드입니다.</p>
+<div class="code-block"><pre><code>cd src
+git new-branch crypto-hash-c6   <span class="c"># 카드 번호에 맞게</span></code></pre><button type="button" class="copy" data-copy="cd src
+git new-branch crypto-hash-c6">복사</button></div>
+<h2 id="3단계-고치기">3단계. 고치기<a class="anchor" href="#3단계-고치기" aria-label="이 절 링크">#</a></h2>
+<p>카드의 &quot;할 일&quot;대로 바꿉니다. 바꾸는 법은 아래 표와 같습니다.</p>
+<div class="table-wrap"><table class="stack">
+<thead>
+<tr>
+<th>옛 코드</th>
+<th>새 코드</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="옛 코드"><code>#include &quot;crypto/sha2.h&quot;</code></td>
+<td data-label="새 코드"><code>#include &quot;crypto/hash.h&quot;</code></td>
+</tr>
+<tr>
+<td data-label="옛 코드"><code>crypto::kSHA256Length</code></td>
+<td data-label="새 코드"><code>crypto::hash::kSha256Size</code></td>
+</tr>
+<tr>
+<td data-label="옛 코드"><code>crypto::SHA256Hash(x)</code></td>
+<td data-label="새 코드"><code>crypto::hash::Sha256(x)</code></td>
+</tr>
+<tr>
+<td data-label="옛 코드"><code>crypto::SHA256HashString(x)</code></td>
+<td data-label="새 코드"><code>std::string(base::as_string_view(crypto::hash::Sha256(x)))</code>, 그리고 <code>#include &quot;base/strings/string_view_util.h&quot;</code></td>
+</tr>
+<tr>
+<td data-label="옛 코드"><code>base::HexEncode(crypto::SHA256HashString(x))</code></td>
+<td data-label="새 코드"><code>base::HexEncode(crypto::hash::Sha256(x))</code></td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>include만 지우는 카드는 <code>#include &quot;crypto/sha2.h&quot;</code> 줄만 지웁니다. 그 파일이 <code>std::array</code>나 <code>base::span</code>을 쓰는데 직접 include가 없으면 빌드가 깨질 수 있으니, 그때는 <code>&lt;array&gt;</code>나 <code>&quot;base/containers/span.h&quot;</code>를 넣습니다.</li>
+<li>앞서 머지된 CL을 보면 감이 옵니다: <a href="https://crrev.com/c/8264232" target="_blank" rel="noopener">8264232</a>(include 지우기), <a href="https://crrev.com/c/8505842" target="_blank" rel="noopener">8505842</a>(SHA256HashString 바꾸기), <a href="https://crrev.com/c/8382616" target="_blank" rel="noopener">8382616</a>(kSHA256Length 바꾸기).</li>
+</ul>
+<h2 id="4단계-빌드하고-테스트">4단계. 빌드하고 테스트<a class="anchor" href="#4단계-빌드하고-테스트" aria-label="이 절 링크">#</a></h2>
+<p>카드의 &quot;확인&quot; 명령을 그대로 돌립니다. 예를 들면 이렇습니다.</p>
+<div class="code-block"><pre><code>autoninja -C out/Default components_unittests
+out/Default/components_unittests --gtest_filter='EncryptionUtils*'</code></pre><button type="button" class="copy" data-copy="autoninja -C out/Default components_unittests
+out/Default/components_unittests --gtest_filter='EncryptionUtils*'">복사</button></div>
+<ul>
+<li>include만 지우는 카드는 그 파일만 컴파일해 볼 수도 있습니다. 경로 앞에 <code>../../</code>, 뒤에 <code>^</code>를 붙입니다: <code>autoninja -C out/Default ../../net/cert/cert_verify_proc.cc^</code></li>
+<li>빌드와 테스트가 모두 통과해야 올립니다.</li>
+</ul>
+<h2 id="5단계-커밋과-업로드">5단계. 커밋과 업로드<a class="anchor" href="#5단계-커밋과-업로드" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>git cl format
+git commit -a
+git cl upload -f --hashtag=hacktoberfest-seoul-2026</code></pre><button type="button" class="copy" data-copy="git cl format
+git commit -a
+git cl upload -f --hashtag=hacktoberfest-seoul-2026">복사</button></div>
+<p>커밋 메시지는 카드 제목에서 <code>[code] </code>를 뺀 것을 제목으로 씁니다.</p>
+<div class="code-block"><pre><code>password_manager/leak_detection: migrate to crypto/hash APIs
+
+Replace crypto::SHA256HashString with crypto::hash::Sha256 and drop
+the crypto/sha2.h include.
+
+Bug: 372283556</code></pre><button type="button" class="copy" data-copy="password_manager/leak_detection: migrate to crypto/hash APIs
+Replace crypto::SHA256HashString with crypto::hash::Sha256 and drop
+the crypto/sha2.h include.
+Bug: 372283556">복사</button></div>
+<p>첫 기여라면 AUTHORS에 이름도 넣습니다(<a href="first-cl.html">첫 CL 올리기 3단계</a>).</p>
+<h2 id="6단계-리뷰-요청">6단계. 리뷰 요청<a class="anchor" href="#6단계-리뷰-요청" aria-label="이 절 링크">#</a></h2>
+<p>Gerrit에서 Start Review를 누르고 카드의 리뷰어 후보 중 첫째와 둘째를 넣습니다. 참가자 계정은 봇 검사(dry run)도 CQ+2도 걸 수 없으니 메시지에 부탁을 적습니다.</p>
+<div class="code-block"><pre><code>Part of the crypto/hash migration (crbug.com/372283556). I don't have
+try job access, so could you start a CQ dry run, and Submit to CQ once
+it's approved?</code></pre><button type="button" class="copy" data-copy="Part of the crypto/hash migration (crbug.com/372283556). I don't have
+try job access, so could you start a CQ dry run, and Submit to CQ once
+it's approved?">복사</button></div>
+<p>그다음은 <a href="review.html">리뷰 받기</a>와 같습니다. 막히면 Discord 스레드에 명령과 출력을 붙여 올려 주세요.</p>
+
+    </div>
+    <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="cards.html"><span>이전</span>← 이슈 카드</a><a class="next" href="links.html"><span>다음</span>유용한 링크 →</a></nav>
+  </article>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#준비물">준비물</a></li><li class="lv2"><a href="#1단계-받고-빌드-준비">1단계. 받고 빌드 준비</a></li><li class="lv2"><a href="#2단계-카드-고르기">2단계. 카드 고르기</a></li><li class="lv2"><a href="#3단계-고치기">3단계. 고치기</a></li><li class="lv2"><a href="#4단계-빌드하고-테스트">4단계. 빌드하고 테스트</a></li><li class="lv2"><a href="#5단계-커밋과-업로드">5단계. 커밋과 업로드</a></li><li class="lv2"><a href="#6단계-리뷰-요청">6단계. 리뷰 요청</a></li></ul></nav></aside>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-row">
+    <nav class="footer-nav" aria-label="바닥 메뉴"><a href="index.html">가이드</a><a href="cards.html">이슈 카드</a><a href="troubleshooting.html">막혔을 때</a><a href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener">GitHub</a></nav>
+    <p>© 2026 Hacktoberfest Seoul · Chromium 테이블. 디자인은 <a href="https://github.com/OSSCA-chromium/contributions" target="_blank" rel="noopener">OSSCA Chromium</a>(MIT)을 따랐습니다.</p>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>이슈 카드 | Hacktoberfest Seoul · Chromium</title>
-<meta name="description" content="고칠 링크 28곳 — 쉬움 19 · 보통 9">
+<meta name="description" content="고칠 링크 28곳 — 쉬움 19 · 보통 9, 집에서 하는 코드 카드 10장">
 <meta property="og:title" content="이슈 카드 | Hacktoberfest Seoul · Chromium">
-<meta property="og:description" content="고칠 링크 28곳 — 쉬움 19 · 보통 9">
+<meta property="og:description" content="고칠 링크 28곳 — 쉬움 19 · 보통 9, 집에서 하는 코드 카드 10장">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/favicon.png">
@@ -31,15 +31,15 @@
 </header>
 <main id="main" class="container main">
 <div class="doc-layout">
-  <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html" aria-current="page" class="is-active">이슈 카드</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
+  <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html" aria-current="page" class="is-active">이슈 카드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
   <article class="doc">
-    <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html" aria-current="page" class="is-active">이슈 카드</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
+    <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html" aria-current="page" class="is-active">이슈 카드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
     
     <h1 class="page-title">이슈 카드</h1>
     <div class="prose">
 <p>카드 한 장이 고칠 파일 하나입니다. 마음에 드는 카드를 골라 GitHub 카드에 댓글로 &quot;제가 할게요&quot;를 남기면 멘토가 assign합니다. 한 사람에 한 카드이고, 처음이면 <strong>쉬움</strong>부터 고르세요. 2026년 10월 29일 최신 main에서 모두 아직 깨져 있는 것을 확인했습니다.</p>
 <div class="card-filters" role="group" aria-label="난이도로 거르기"><button type="button" class="chip is-active" data-filter="all" aria-pressed="true">전체 <b>28</b></button><button type="button" class="chip" data-filter="쉬움" aria-pressed="false">쉬움 <b>19</b></button><button type="button" class="chip" data-filter="보통" aria-pressed="false">보통 <b>9</b></button></div>
-<ol class="card-list">
+<ol class="card-list docs-cards">
 <li class="card-row" data-level="쉬움">
   <span class="card-num">1</span>
   <span class="badge badge-easy">쉬움</span>
@@ -215,11 +215,75 @@
 <li>23번은 같은 파일을 고치는 다른 사람의 CL이 열려 있어서, 머지 전에 rebase가 필요할 수 있습니다.</li>
 <li>리뷰어 후보는 카드에 적혀 있고, 지정하기 전에 멘토와 확인합니다. 후보는 모두 커미터이고, 카드의 파일은 모두 OWNERS가 <code>*</code>라 이 후보들의 +1로 승인이 됩니다(10월 29일 확인).</li>
 </ul>
+<h2 id="집에서-하는-코드-카드">집에서 하는 코드 카드<a class="anchor" href="#집에서-하는-코드-카드" aria-label="이 절 링크">#</a></h2>
+<p>Chromium 전체를 받아 빌드해야 하는 카드 10장입니다. 행사장에서는 하지 않고, 해 보고 싶은 분은 집에서 <a href="code.html">코드 카드 안내</a>를 따라 합니다. 옛 해시 함수를 새 API로 바꾸는 일이고, 카드마다 돌려 볼 단위 테스트가 적혀 있습니다.</p>
+<ol class="card-list code-cards">
+<li class="card-row" data-level="쉬움">
+  <span class="card-num">C1</span>
+  <span class="badge badge-easy">쉬움</span>
+  <div class="card-body"><code class="card-file">net: remove stale crypto/sha2 includes</code><p class="card-todo"><code>net/cert/cert_verify_proc.cc 외 4개</code><br><code>#include &quot;crypto/sha2.h&quot;</code> 줄만 지운다. cert_builder.cc는 std::array를 써서 <code>#include &lt;array&gt;</code>가 없으면 넣는다</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/31" target="_blank" rel="noopener">GitHub 카드 #31</a>
+</li>
+<li class="card-row" data-level="쉬움">
+  <span class="card-num">C2</span>
+  <span class="badge badge-easy">쉬움</span>
+  <div class="card-body"><code class="card-file">safe_browsing/extension_telemetry: remove stale crypto/sha2 include</code><p class="card-todo"><code>chrome/browser/safe_browsing/extension_telemetry/potential_password_theft_signal_processor.cc</code><br><code>#include &quot;crypto/sha2.h&quot;</code> 줄만 지운다</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/32" target="_blank" rel="noopener">GitHub 카드 #32</a>
+</li>
+<li class="card-row" data-level="쉬움">
+  <span class="card-num">C3</span>
+  <span class="badge badge-easy">쉬움</span>
+  <div class="card-body"><code class="card-file">chrome/services/file_util: remove stale crypto/sha2 includes</code><p class="card-todo"><code>chrome/services/file_util/public/cpp/sandboxed_rar_analyzer_unittest.cc 외 1개</code><br><code>#include &quot;crypto/sha2.h&quot;</code> 줄만 지운다</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/33" target="_blank" rel="noopener">GitHub 카드 #33</a>
+</li>
+<li class="card-row" data-level="쉬움">
+  <span class="card-num">C4</span>
+  <span class="badge badge-easy">쉬움</span>
+  <div class="card-body"><code class="card-file">safe_browsing/phishing_classifier: remove stale crypto/sha2 include</code><p class="card-todo"><code>components/safe_browsing/core/common/phishing_classifier/scorer.cc</code><br><code>#include &quot;crypto/sha2.h&quot;</code> 줄만 지운다</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/34" target="_blank" rel="noopener">GitHub 카드 #34</a>
+</li>
+<li class="card-row" data-level="쉬움">
+  <span class="card-num">C5</span>
+  <span class="badge badge-easy">쉬움</span>
+  <div class="card-body"><code class="card-file">payments: remove stale crypto/sha2 include</code><p class="card-todo"><code>components/payments/content/secure_payment_confirmation_app.cc</code><br><code>#include &quot;crypto/sha2.h&quot;</code> 줄만 지운다</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/35" target="_blank" rel="noopener">GitHub 카드 #35</a>
+</li>
+<li class="card-row" data-level="보통">
+  <span class="card-num">C6</span>
+  <span class="badge badge-normal">보통</span>
+  <div class="card-body"><code class="card-file">password_manager/leak_detection: migrate to crypto/hash APIs</code><p class="card-todo"><code>components/password_manager/core/browser/leak_detection/encryption_utils.cc</code><br><code>crypto::SHA256HashString(base::StrCat(...))</code> 1곳을 <code>std::string(base::as_string_view(crypto::hash::Sha256(base::StrCat(...))))</code>로. include는 <code>crypto/hash.h</code>로</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/36" target="_blank" rel="noopener">GitHub 카드 #36</a>
+</li>
+<li class="card-row" data-level="보통">
+  <span class="card-num">C7</span>
+  <span class="badge badge-normal">보통</span>
+  <div class="card-body"><code class="card-file">optimization_guide: migrate to crypto/hash APIs</code><p class="card-todo"><code>components/optimization_guide/core/model_execution/manifest_broker/manifest_asset_manager_delegate.cc</code><br><code>crypto::kSHA256Length</code> 1곳을 <code>crypto::hash::kSha256Size</code>로, include는 <code>crypto/hash.h</code>로</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/37" target="_blank" rel="noopener">GitHub 카드 #37</a>
+</li>
+<li class="card-row" data-level="보통">
+  <span class="card-num">C8</span>
+  <span class="badge badge-normal">보통</span>
+  <div class="card-body"><code class="card-file">extensions: migrate content_hash to crypto/hash APIs</code><p class="card-todo"><code>extensions/browser/content_verifier/content_hash.cc</code><br><code>crypto::kSHA256Length</code> 2곳을 <code>crypto::hash::kSha256Size</code>로, include는 <code>crypto/hash.h</code>로</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/38" target="_blank" rel="noopener">GitHub 카드 #38</a>
+</li>
+<li class="card-row" data-level="보통">
+  <span class="card-num">C9</span>
+  <span class="badge badge-normal">보통</span>
+  <div class="card-body"><code class="card-file">web_package test_support: migrate to crypto/hash APIs</code><p class="card-todo"><code>components/web_package/test_support/signed_web_bundles/ecdsa_p256_key_pair.cc</code><br><code>std::array&lt;uint8_t, crypto::kSHA256Length&gt; digest = crypto::SHA256Hash(message);</code>를 <code>crypto::hash::kSha256Size</code>와 <code>crypto::hash::Sha256</code>으로. include는 <code>crypto/hash.h</code>로</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/39" target="_blank" rel="noopener">GitHub 카드 #39</a>
+</li>
+<li class="card-row" data-level="보통">
+  <span class="card-num">C10</span>
+  <span class="badge badge-normal">보통</span>
+  <div class="card-body"><code class="card-file">service_worker: migrate script loader factory test to crypto/hash</code><p class="card-todo"><code>content/browser/service_worker/service_worker_script_loader_factory_unittest.cc</code><br><code>base::HexEncode(crypto::SHA256HashString(kData))</code>를 <code>base::HexEncode(crypto::hash::Sha256(kData))</code>로. include는 <code>crypto/hash.h</code>로</p></div>
+  <a class="card-open" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium/issues/40" target="_blank" rel="noopener">GitHub 카드 #40</a>
+</li>
+</ol>
 
     </div>
-    <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="troubleshooting.html"><span>이전</span>← 막혔을 때</a><a class="next" href="links.html"><span>다음</span>유용한 링크 →</a></nav>
+    <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="troubleshooting.html"><span>이전</span>← 막혔을 때</a><a class="next" href="code.html"><span>다음</span>코드 카드 (집에서) →</a></nav>
   </article>
-  <aside class="doc-toc"></aside>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#집에서-하는-코드-카드">집에서 하는 코드 카드</a></li></ul></nav></aside>
 </div>
 </main>
 <footer class="site-footer">
