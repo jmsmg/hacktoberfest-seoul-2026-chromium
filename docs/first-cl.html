@@ -34,7 +34,7 @@
   <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html" aria-current="page" class="is-active">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
   <article class="doc">
     <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html" aria-current="page" class="is-active">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
-    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-1분">1단계. 소스 받기 (1분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-12분">1단계. 소스 받기 (1~2분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></div></details>
     <h1 class="page-title">첫 CL 올리기</h1>
     <div class="prose">
 <p>Chromium 문서의 깨진 링크 하나를 고쳐 Gerrit에 CL을 올립니다. 아래 예시는 1번 카드 <code>docs/linux/dependencies.md</code>로 설명합니다. 내 <a href="cards.html">카드</a>의 파일과 경로로 바꿔 읽으세요.</p>
@@ -48,8 +48,8 @@ git cl help
 git config --global user.email
 git credential-luci info">복사</button></div>
 <p>Windows는 PowerShell이 아니라 cmd.exe에서 합니다. <code>git cl help</code>가 &quot;&#39;cl&#39; is not a git command&quot;라고 하면 depot_tools가 PATH에 없는 것입니다.</p>
-<h2 id="1단계-소스-받기-1분">1단계. 소스 받기 (1분)<a class="anchor" href="#1단계-소스-받기-1분" aria-label="이 절 링크">#</a></h2>
-<p>전체 Chromium은 수십 GB라 받지 않습니다. 아래 명령은 문서 폴더와 업로드 전 검사(presubmit)에 필요한 폴더만 받습니다. 10월 29일에 다시 재 보니 약 1분, 252MB였습니다.</p>
+<h2 id="1단계-소스-받기-12분">1단계. 소스 받기 (1~2분)<a class="anchor" href="#1단계-소스-받기-12분" aria-label="이 절 링크">#</a></h2>
+<p>전체 Chromium은 수십 GB라 받지 않습니다. 아래 명령은 문서 폴더와 업로드 전 검사(presubmit)에 필요한 폴더만 받습니다. 10월 29일에 두 번 재 보니 1분에서 1분 43초, 252MB였습니다. 행사장처럼 여럿이 같은 네트워크를 쓰면 더 걸릴 수 있습니다.</p>
 <div class="code-block"><pre><code>cd ~                               <span class="c"># Windows: cd C:\src</span>
 git clone --depth=1 --filter=blob:none --sparse https://chromium.googlesource.com/chromium/src
 cd src
@@ -144,7 +144,7 @@ Bug: 538651940">복사</button></div>
     </div>
     <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="setup.html"><span>이전</span>← 사전 준비</a><a class="next" href="review.html"><span>다음</span>리뷰 받기 →</a></nav>
   </article>
-  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-1분">1단계. 소스 받기 (1분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></nav></aside>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-12분">1단계. 소스 받기 (1~2분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></nav></aside>
 </div>
 </main>
 <footer class="site-footer">
