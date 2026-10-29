@@ -34,7 +34,7 @@
   <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html" aria-current="page" class="is-active">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
   <article class="doc">
     <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html" aria-current="page" class="is-active">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
-    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#문서-기여와-다른-점">문서 기여와 다른 점</a></li><li class="lv2"><a href="#0단계-준비물">0단계. 준비물</a></li><li class="lv2"><a href="#1단계-전체-소스-받기">1단계. 전체 소스 받기</a></li><li class="lv2"><a href="#2단계-빌드-설정">2단계. 빌드 설정</a></li><li class="lv2"><a href="#3단계-빌드">3단계. 빌드</a></li><li class="lv2"><a href="#4단계-브랜치-만들고-고치기">4단계. 브랜치 만들고 고치기</a></li><li class="lv2"><a href="#5단계-테스트">5단계. 테스트</a></li><li class="lv2"><a href="#6단계-커밋과-업로드">6단계. 커밋과 업로드</a></li><li class="lv2"><a href="#7단계-리뷰-요청">7단계. 리뷰 요청</a></li><li class="lv2"><a href="#소스를-최신으로-맞추기">소스를 최신으로 맞추기</a></li><li class="lv2"><a href="#무엇을-고칠까">무엇을 고칠까</a></li></ul></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#문서-기여와-다른-점">문서 기여와 다른 점</a></li><li class="lv2"><a href="#0단계-준비물">0단계. 준비물</a></li><li class="lv2"><a href="#1단계-전체-소스-받기">1단계. 전체 소스 받기</a></li><li class="lv2"><a href="#2단계-빌드-설정">2단계. 빌드 설정</a></li><li class="lv2"><a href="#3단계-빌드">3단계. 빌드</a></li><li class="lv2"><a href="#4단계-일감-고르기">4단계. 일감 고르기</a></li><li class="lv2"><a href="#5단계-브랜치-만들고-고치기">5단계. 브랜치 만들고 고치기</a></li><li class="lv2"><a href="#6단계-테스트">6단계. 테스트</a></li><li class="lv2"><a href="#7단계-커밋과-업로드">7단계. 커밋과 업로드</a></li><li class="lv2"><a href="#8단계-리뷰-요청">8단계. 리뷰 요청</a></li><li class="lv2"><a href="#소스를-최신으로-맞추기">소스를 최신으로 맞추기</a></li></ul></div></details>
     <h1 class="page-title">코드 기여 가이드</h1>
     <div class="prose">
 <p>문서 기여는 <code>docs/</code> 폴더만 받아 빌드 없이 올렸습니다. 코드는 Chromium 전체를 받아 빌드하고, 바꾼 코드를 지나는 테스트를 돌린 뒤 올립니다. 아래는 <a href="first-cl.html">첫 CL 올리기</a>와 달라지는 부분만 단계별로 적은 것입니다. 시간이 오래 걸려서 집에서 합니다.</p>
@@ -51,6 +51,11 @@
 <td data-label="">소스</td>
 <td data-label="문서 기여"><code>docs/</code>만 sparse 클론, 1분, 252MB</td>
 <td data-label="코드 기여"><code>fetch chromium</code>으로 전체, 한두 시간, 디스크 100GB 이상</td>
+</tr>
+<tr>
+<td data-label="">일감</td>
+<td data-label="문서 기여">이슈 카드 28장</td>
+<td data-label="코드 기여">코드 카드 10장, Issue Tracker의 GoodFirstBug 핫리스트</td>
 </tr>
 <tr>
 <td data-label="">빌드</td>
@@ -118,11 +123,19 @@ autoninja -C out/Default ../../net/cert/cert_verify_proc.cc^">복사</button></d
 <ul>
 <li>첫 빌드는 몇 시간 걸립니다. 다음부터는 바뀐 부분만 다시 빌드합니다.</li>
 <li>브라우저를 직접 띄워 보고 싶으면 <code>autoninja -C out/Default chrome</code>입니다. 가장 오래 걸립니다.</li>
+<li>빌드한 브라우저 실행은 Linux <code>out/Default/chrome</code>, macOS <code>out/Default/Chromium.app/Contents/MacOS/Chromium</code>, Windows <code>out\Default\chrome.exe</code>입니다.</li>
 </ul>
-<h2 id="4단계-브랜치-만들고-고치기">4단계. 브랜치 만들고 고치기<a class="anchor" href="#4단계-브랜치-만들고-고치기" aria-label="이 절 링크">#</a></h2>
+<h2 id="4단계-일감-고르기">4단계. 일감 고르기<a class="anchor" href="#4단계-일감-고르기" aria-label="이 절 링크">#</a></h2>
+<ul>
+<li>처음이라면 <a href="code.html">코드 카드</a> 10장 중 하나를 고릅니다. 바꿀 곳과 돌릴 테스트가 정해져 있습니다.</li>
+<li>그다음은 Issue Tracker의 <a href="https://issues.chromium.org/hotlists/5483263" target="_blank" rel="noopener">GoodFirstBug 핫리스트</a>에서 찾습니다. 관심 있는 컴포넌트로 좁혀 보면 고르기 쉽습니다.</li>
+<li>고른 이슈에 댓글로 작업하겠다고 밝힙니다. 그 전에 담당자(assignee)가 이미 있는지, 같은 이슈로 열린 CL이 있는지 봅니다.</li>
+<li>무엇을 고를지 막막하면 멘토와 상의합니다.</li>
+</ul>
+<h2 id="5단계-브랜치-만들고-고치기">5단계. 브랜치 만들고 고치기<a class="anchor" href="#5단계-브랜치-만들고-고치기" aria-label="이 절 링크">#</a></h2>
 <div class="code-block"><pre><code>git new-branch my-fix</code></pre><button type="button" class="copy" data-copy="git new-branch my-fix">복사</button></div>
 <p>고친 뒤에는 <code>git cl format</code>으로 모양을 맞춥니다. C++은 clang-format, <code>BUILD.gn</code>은 gn format이 알아서 돌아갑니다.</p>
-<h2 id="5단계-테스트">5단계. 테스트<a class="anchor" href="#5단계-테스트" aria-label="이 절 링크">#</a></h2>
+<h2 id="6단계-테스트">6단계. 테스트<a class="anchor" href="#6단계-테스트" aria-label="이 절 링크">#</a></h2>
 <div class="code-block"><pre><code>autoninja -C out/Default net_unittests
 out/Default/net_unittests --gtest_filter='CertVerifyProc*'</code></pre><button type="button" class="copy" data-copy="autoninja -C out/Default net_unittests
 out/Default/net_unittests --gtest_filter='CertVerifyProc*'">복사</button></div>
@@ -131,7 +144,7 @@ out/Default/net_unittests --gtest_filter='CertVerifyProc*'">복사</button></div
 <li>브라우저를 띄우는 테스트는 <code>browser_tests</code>, <code>content_browsertests</code>처럼 따로 있고 더 오래 걸립니다.</li>
 <li>모두 통과해야 올립니다.</li>
 </ul>
-<h2 id="6단계-커밋과-업로드">6단계. 커밋과 업로드<a class="anchor" href="#6단계-커밋과-업로드" aria-label="이 절 링크">#</a></h2>
+<h2 id="7단계-커밋과-업로드">7단계. 커밋과 업로드<a class="anchor" href="#7단계-커밋과-업로드" aria-label="이 절 링크">#</a></h2>
 <div class="code-block"><pre><code>git commit -a
 git cl upload -f --hashtag=hacktoberfest-seoul-2026</code></pre><button type="button" class="copy" data-copy="git commit -a
 git cl upload -f --hashtag=hacktoberfest-seoul-2026">복사</button></div>
@@ -141,7 +154,7 @@ git cl upload -f --hashtag=hacktoberfest-seoul-2026">복사</button></div>
 <li>관련 버그가 있으면 <code>Bug: &lt;번호&gt;</code>, 그 CL로 버그가 끝나면 <code>Fixed: &lt;번호&gt;</code>, 없으면 <code>Bug: none</code>을 씁니다.</li>
 <li>첫 기여라면 AUTHORS에 이름을 넣습니다.</li>
 </ul>
-<h2 id="7단계-리뷰-요청">7단계. 리뷰 요청<a class="anchor" href="#7단계-리뷰-요청" aria-label="이 절 링크">#</a></h2>
+<h2 id="8단계-리뷰-요청">8단계. 리뷰 요청<a class="anchor" href="#8단계-리뷰-요청" aria-label="이 절 링크">#</a></h2>
 <ul>
 <li>그 폴더의 OWNERS가 한 명 있어야 승인이 됩니다. <code>git cl owners</code>나 Gerrit 리뷰어 칸의 OWNERS 제안으로 찾습니다. 커미터가 아니면 커미터 두 명의 +1이 필요합니다.</li>
 <li>코드 CL은 봇이 여러 운영체제에서 빌드와 테스트를 돌려 봐야 합니다. 참가자 계정은 dry run도 CQ+2도 걸 수 없으니 Start Review 메시지에 부탁합니다.</li>
@@ -157,13 +170,11 @@ Submit to CQ once it's approved?">복사</button></div>
 <div class="code-block"><pre><code>git rebase-update   <span class="c"># main을 받아 내 브랜치를 그 위로 옮긴다</span>
 gclient sync        <span class="c"># 의존 저장소도 맞춘다</span></code></pre><button type="button" class="copy" data-copy="git rebase-update
 gclient sync">복사</button></div>
-<h2 id="무엇을-고칠까">무엇을 고칠까<a class="anchor" href="#무엇을-고칠까" aria-label="이 절 링크">#</a></h2>
-<p>연습할 일감은 <a href="code.html">코드 카드</a> 10장입니다. 그 밖의 일감은 멘토와 상의해서 고릅니다.</p>
 
     </div>
     <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="cards.html"><span>이전</span>← 이슈 카드</a><a class="next" href="code.html"><span>다음</span>코드 카드 (집에서) →</a></nav>
   </article>
-  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#문서-기여와-다른-점">문서 기여와 다른 점</a></li><li class="lv2"><a href="#0단계-준비물">0단계. 준비물</a></li><li class="lv2"><a href="#1단계-전체-소스-받기">1단계. 전체 소스 받기</a></li><li class="lv2"><a href="#2단계-빌드-설정">2단계. 빌드 설정</a></li><li class="lv2"><a href="#3단계-빌드">3단계. 빌드</a></li><li class="lv2"><a href="#4단계-브랜치-만들고-고치기">4단계. 브랜치 만들고 고치기</a></li><li class="lv2"><a href="#5단계-테스트">5단계. 테스트</a></li><li class="lv2"><a href="#6단계-커밋과-업로드">6단계. 커밋과 업로드</a></li><li class="lv2"><a href="#7단계-리뷰-요청">7단계. 리뷰 요청</a></li><li class="lv2"><a href="#소스를-최신으로-맞추기">소스를 최신으로 맞추기</a></li><li class="lv2"><a href="#무엇을-고칠까">무엇을 고칠까</a></li></ul></nav></aside>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#문서-기여와-다른-점">문서 기여와 다른 점</a></li><li class="lv2"><a href="#0단계-준비물">0단계. 준비물</a></li><li class="lv2"><a href="#1단계-전체-소스-받기">1단계. 전체 소스 받기</a></li><li class="lv2"><a href="#2단계-빌드-설정">2단계. 빌드 설정</a></li><li class="lv2"><a href="#3단계-빌드">3단계. 빌드</a></li><li class="lv2"><a href="#4단계-일감-고르기">4단계. 일감 고르기</a></li><li class="lv2"><a href="#5단계-브랜치-만들고-고치기">5단계. 브랜치 만들고 고치기</a></li><li class="lv2"><a href="#6단계-테스트">6단계. 테스트</a></li><li class="lv2"><a href="#7단계-커밋과-업로드">7단계. 커밋과 업로드</a></li><li class="lv2"><a href="#8단계-리뷰-요청">8단계. 리뷰 요청</a></li><li class="lv2"><a href="#소스를-최신으로-맞추기">소스를 최신으로 맞추기</a></li></ul></nav></aside>
 </div>
 </main>
 <footer class="site-footer">
