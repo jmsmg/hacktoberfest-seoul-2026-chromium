@@ -110,7 +110,7 @@
 <tr>
 <td data-label="증상"><code>CV cannot start a Run … not a committer</code> 또는 <code>not a dry-runner</code></td>
 <td data-label="원인">참가자가 CQ 버튼을 눌렀다</td>
-<td data-label="해결">그대로 두고 멘토에게 알립니다. 커미터가 대신 겁니다</td>
+<td data-label="해결">그대로 둡니다. 승인이 끝나면 리뷰어가 겁니다</td>
 </tr>
 <tr>
 <td data-label="증상"><code>CV cannot start a Run … Review-Enforcement</code></td>
@@ -126,7 +126,7 @@
 <h2 id="셋업이-안-됐을-때">셋업이 안 됐을 때<a class="anchor" href="#셋업이-안-됐을-때" aria-label="이 절 링크">#</a></h2>
 <ul>
 <li><strong>짝 작업.</strong> 셋업이 된 사람 옆에서 같은 카드를 함께 풉니다. CL 소유자는 노트북 주인이 되므로, 본인 CL은 집에서 이 가이드대로 만들고 Discord 스레드에 링크를 올립니다. 멘토가 같은 방식으로 봐 줍니다.</li>
-<li><strong>Gerrit 웹 편집.</strong> 멘토가 미리 확인한 경우에만 씁니다. 로그인 → Browse › Repositories › chromium/src › Commands › Create Change(branch <code>main</code>, subject는 <a href="first-cl.html">4단계</a> 양식의 제목) → Edit → 파일을 열어 고치고 <code>AUTHORS</code>에 한 줄 추가 → Publish Edit → Start Review. 로컬 presubmit이 돌지 않으니 멘토가 CQ dry run으로 대신 검사합니다. 이 방법은 Google 계정과 CLA만 있으면 됩니다.</li>
+<li><strong>Gerrit 웹 편집.</strong> 멘토가 미리 확인한 경우에만 씁니다. 로그인 → Browse › Repositories › chromium/src › Commands › Create Change(branch <code>main</code>, subject는 <a href="first-cl.html">4단계</a> 양식의 제목) → Edit → 파일을 열어 고치고 <code>AUTHORS</code>에 한 줄 추가 → Publish Edit → Start Review. 로컬 presubmit이 돌지 않습니다. 봇 검사는 리뷰어가 Commit-Queue +2를 걸 때 돌고, 실패하면 고쳐서 다시 올립니다. 이 방법은 Google 계정과 CLA만 있으면 됩니다.</li>
 <li><strong>집에서 이어서.</strong> <a href="setup.html">사전 준비</a>를 끝내고 <a href="first-cl.html">첫 CL 올리기</a>의 0~5단계를 따라 합니다. 막히면 Discord 스레드에 증상과 명령 출력을 붙여 올립니다.</li>
 </ul>
 
