@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hacktoberfest Seoul · Chromium 가이드</title>
+<meta name="description" content="Hacktoberfest Seoul 2026 Chromium 테이블. Chromium 문서의 깨진 링크를 고쳐 Gerrit에 첫 CL을 올리는 가이드.">
+<meta property="og:title" content="Hacktoberfest Seoul · Chromium 가이드">
+<meta property="og:description" content="Hacktoberfest Seoul 2026 Chromium 테이블. Chromium 문서의 깨진 링크를 고쳐 Gerrit에 첫 CL을 올리는 가이드.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="strip" aria-hidden="true"></div>
+  <div class="container header-row">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><span></span></span><span class="brand-text">Hacktoberfest Seoul · Chromium</span></a>
+    <nav class="site-nav" aria-label="주 메뉴"><a href="index.html" aria-current="page" class="is-active">가이드</a><a href="cards.html">이슈 카드</a><a href="troubleshooting.html">막혔을 때</a></nav>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" aria-label="테마 전환"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <a class="gh-pill" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener" aria-label="GitHub 저장소"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></a>
+    </div>
+  </div>
+</header>
+<main id="main" class="container main">
+<section class="hero brand-mesh">
+  <p class="eyebrow"><span class="label-chip">Hacktoberfest Seoul 2026</span><span>10월 31일(토) · 테헤란로 311 3층</span></p>
+  <h1 class="hero-title"><span class="brand-gradient-text">Chromium 문서 기여</span></h1>
+  <p class="hero-lead">Chromium 문서(<code>docs/</code>)에서 없는 파일을 가리키는 링크 한 줄을 고쳐 Gerrit에 첫 CL을 올립니다. 빌드는 하지 않고, 소스는 1분이면 받습니다.</p>
+  <div class="hero-cta"><a class="btn btn-primary" href="setup.html">사전 준비부터</a><a class="btn btn-outline" href="cards.html">이슈 카드 보기</a></div>
+</section>
+<section class="stats" aria-label="한눈에">
+  <div class="stat"><p class="stat-num blue">1개</p><p class="stat-label">오늘의 결과물, Gerrit CL 링크</p></div>
+  <div class="stat"><p class="stat-num green">28장</p><p class="stat-label">이슈 카드, 쉬움 19 · 보통 9</p></div>
+  <div class="stat"><p class="stat-num amber">1분</p><p class="stat-label">소스 받기 252MB, 빌드 없음</p></div>
+</section>
+<section class="home-docs">
+  <h2 class="page-title">문서</h2>
+<section class="index-group"><h2>가이드</h2><ul><li><a href="start.html"><span class="index-title">시작하기</span><span class="index-desc">— 오늘 하는 일, 일정, 결과물</span></a></li><li><a href="setup.html"><span class="index-title">사전 준비</span><span class="index-desc">— 행사 전에 끝낼 계정과 도구 설치 (집에서 30~60분)</span></a></li><li><a href="first-cl.html"><span class="index-title">첫 CL 올리기</span><span class="index-desc">— 소스 받기부터 업로드까지 0~5단계 (약 1시간)</span></a></li><li><a href="review.html"><span class="index-title">리뷰 받기</span><span class="index-desc">— Start Review로 리뷰어 2명 지정, 코멘트 대응, 머지까지</span></a></li><li><a href="troubleshooting.html"><span class="index-title">막혔을 때</span><span class="index-desc">— 자주 나오는 오류와 해결, 셋업이 안 됐을 때의 대안</span></a></li></ul></section>
+<section class="index-group"><h2>이슈 카드</h2><ul><li><a href="cards.html"><span class="index-title">이슈 카드</span><span class="index-desc">— 고칠 링크 28곳 — 쉬움 19 · 보통 9</span></a></li></ul></section>
+<section class="index-group"><h2>참고 자료</h2><ul><li><a href="links.html"><span class="index-title">유용한 링크</span><span class="index-desc">— Gerrit, Code Search, Issue Tracker 등 자주 여는 사이트</span></a></li><li><a href="glossary.html"><span class="index-title">용어</span><span class="index-desc">— CL, 패치셋, 커미터, CQ 같은 낯선 말 정리</span></a></li></ul></section>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-row">
+    <nav class="footer-nav" aria-label="바닥 메뉴"><a href="index.html">가이드</a><a href="cards.html">이슈 카드</a><a href="troubleshooting.html">막혔을 때</a><a href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener">GitHub</a></nav>
+    <p>© 2026 Hacktoberfest Seoul · Chromium 테이블. 디자인은 <a href="https://github.com/OSSCA-chromium/contributions" target="_blank" rel="noopener">OSSCA Chromium</a>(MIT)을 따랐습니다.</p>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

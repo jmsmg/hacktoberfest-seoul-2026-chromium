@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>첫 CL 올리기 | Hacktoberfest Seoul · Chromium</title>
+<meta name="description" content="소스 받기부터 업로드까지 0~5단계 (약 1시간)">
+<meta property="og:title" content="첫 CL 올리기 | Hacktoberfest Seoul · Chromium">
+<meta property="og:description" content="소스 받기부터 업로드까지 0~5단계 (약 1시간)">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="strip" aria-hidden="true"></div>
+  <div class="container header-row">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><span></span></span><span class="brand-text">Hacktoberfest Seoul · Chromium</span></a>
+    <nav class="site-nav" aria-label="주 메뉴"><a href="index.html" aria-current="page" class="is-active">가이드</a><a href="cards.html">이슈 카드</a><a href="troubleshooting.html">막혔을 때</a></nav>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" aria-label="테마 전환"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <a class="gh-pill" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener" aria-label="GitHub 저장소"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></a>
+    </div>
+  </div>
+</header>
+<main id="main" class="container main">
+<div class="doc-layout">
+  <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html" aria-current="page" class="is-active">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
+  <article class="doc">
+    <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html" aria-current="page" class="is-active">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-1분">1단계. 소스 받기 (1분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></div></details>
+    <h1 class="page-title">첫 CL 올리기</h1>
+    <div class="prose">
+<p>Chromium 문서의 깨진 링크 하나를 고쳐 Gerrit에 CL을 올립니다. 아래 예시는 1번 카드 <code>docs/linux/dependencies.md</code>로 설명합니다. 내 <a href="cards.html">카드</a>의 파일과 경로로 바꿔 읽으세요.</p>
+<h2 id="0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)<a class="anchor" href="#0단계-시작-전-점검-5분" aria-label="이 절 링크">#</a></h2>
+<p>네 줄을 차례로 실행합니다. 하나라도 안 되면 손을 들고, 셋업이 20분을 넘기면 <a href="troubleshooting.html">막혔을 때</a>의 대안으로 갑니다.</p>
+<div class="code-block"><pre><code>git --version                     <span class="c"># 2.x 면 됩니다</span>
+git cl help                       <span class="c"># depot_tools 가 PATH 에 있으면 명령 목록이 나옵니다</span>
+git config --global user.email    <span class="c"># CLA·Gerrit 에 쓴 Google 계정 이메일이어야 합니다</span>
+git credential-luci info          <span class="c"># 같은 이메일이 나와야 합니다. 안 나오면: git credential-luci login</span></code></pre><button type="button" class="copy" data-copy="git --version
+git cl help
+git config --global user.email
+git credential-luci info">복사</button></div>
+<p>Windows는 PowerShell이 아니라 cmd.exe에서 합니다. <code>git cl help</code>가 &quot;&#39;cl&#39; is not a git command&quot;라고 하면 depot_tools가 PATH에 없는 것입니다.</p>
+<h2 id="1단계-소스-받기-1분">1단계. 소스 받기 (1분)<a class="anchor" href="#1단계-소스-받기-1분" aria-label="이 절 링크">#</a></h2>
+<p>전체 Chromium은 수십 GB라 받지 않습니다. 아래 명령은 문서 폴더와 업로드 전 검사(presubmit)에 필요한 폴더만 받습니다. 10월 29일에 다시 재 보니 약 1분, 252MB였습니다.</p>
+<div class="code-block"><pre><code>cd ~                               <span class="c"># Windows: cd C:\src</span>
+git clone --depth=1 --filter=blob:none --sparse https://chromium.googlesource.com/chromium/src
+cd src
+git sparse-checkout set docs infra build/ios build/util tools/android/infobar_deprecation tools/checkperms tools/metrics tools/python tools/resources tools/web_dev_style</code></pre><button type="button" class="copy" data-copy="cd ~
+git clone --depth=1 --filter=blob:none --sparse https://chromium.googlesource.com/chromium/src
+cd src
+git sparse-checkout set docs infra build/ios build/util tools/android/infobar_deprecation tools/checkperms tools/metrics tools/python tools/resources tools/web_dev_style">복사</button></div>
+<ul>
+<li>미리 받아 온 사람은 <code>cd src</code>, <code>git checkout main</code>, <code>git pull</code> 순서로 최신화합니다.</li>
+<li><code>docs/</code> 밖의 파일을 고칠 때는 그 폴더를 <code>git sparse-checkout add &lt;폴더&gt;</code>로 더 받습니다. 20~50초 걸립니다. 예: <code>git sparse-checkout add components/os_crypt</code>.</li>
+<li><code>fetch chromium</code>, <code>gclient sync</code>는 실행하지 않습니다. 전체 소스를 받기 시작해 몇 시간이 걸립니다.</li>
+</ul>
+<h2 id="2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)<a class="anchor" href="#2단계-이슈-고르기와-원인-찾기-10분" aria-label="이 절 링크">#</a></h2>
+<ol>
+<li><a href="cards.html">이슈 카드</a>에서 카드 하나를 고르고, GitHub 카드에 댓글로 &quot;제가 할게요&quot;를 남깁니다. 멘토가 assign합니다. 한 사람에 한 카드, 처음이면 쉬움부터.</li>
+<li>깨진 것을 직접 봅니다. 렌더링된 문서 <code>https://chromium.googlesource.com/chromium/src/+/main/&lt;파일 경로&gt;</code>를 열고 그 링크를 누르면 없는 파일이라고 나옵니다.</li>
+<li>대상이 어디로 갔는지 찾습니다. 체크아웃하지 않은 파일도 목록에는 있습니다. 카드의 <strong>힌트</strong>에 찾는 명령과 줄 번호가 있습니다.</li>
+</ol>
+<div class="code-block"><pre><code>git ls-files | grep -i sysroot.md          <span class="c"># Windows cmd: git ls-files | findstr /i sysroot.md</span></code></pre><button type="button" class="copy" data-copy="git ls-files | grep -i sysroot.md">복사</button></div>
+<p>결과가 1개면 옮겨진 것이라 경로만 바꾸면 끝입니다. 0개면 이름이 바뀌었거나 지워진 것이니 <a href="https://source.chromium.org/chromium/chromium/src" target="_blank" rel="noopener">Code Search</a>에서 파일 이름이나 심볼로 검색합니다. 그래도 없으면 멘토와 상의해 링크 문장을 지우거나 대체합니다.</p>
+<figure><img src="img/cs-notfound.jpg" alt="없는 파일을 Code Search에서 열면 &quot;The file does not exist at this commit&quot;이 나옵니다" loading="lazy" decoding="async"><figcaption>없는 파일을 Code Search에서 열면 &quot;The file does not exist at this commit&quot;이 나옵니다</figcaption></figure>
+<ul>
+<li><strong>상대경로 규칙.</strong> 링크는 그 .md 파일이 있는 폴더가 기준입니다. <code>docs/linux/foo.md</code>에서 <code>docs/bar.md</code>는 <code>../bar.md</code>, <code>components/x/README.md</code>는 <code>../../components/x/README.md</code>입니다. <code>/</code>로 시작하면 저장소 루트가 기준입니다.</li>
+<li><strong>절대 URL.</strong> <code>source.chromium.org/...;l=86</code> 같은 링크는 경로를 바꾸고, <code>;l=</code> 뒤 줄 번호는 새 파일에서 다시 셉니다.</li>
+</ul>
+<h2 id="3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)<a class="anchor" href="#3단계-브랜치-만들고-고치기-15분" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>git new-branch fix-dependencies-sysroot-link      <span class="c"># 브랜치 하나 = CL 하나. 이름은 자유</span></code></pre><button type="button" class="copy" data-copy="git new-branch fix-dependencies-sysroot-link">복사</button></div>
+<ol>
+<li>편집기로 파일을 고칩니다. VS Code면 <code>code docs/linux/dependencies.md</code>.</li>
+<li><code>git diff</code>로 바뀐 줄이 그 링크뿐인지 보고, 새 대상이 있는지 <code>git ls-files docs/linux/sysroot.md</code>로 확인합니다.</li>
+<li>첫 기여면 저장소 루트의 <code>AUTHORS</code> 파일에 <code>Gildong Hong &lt;gildong@gmail.com&gt;</code> 한 줄을 알파벳 순서 자리에 넣습니다. 이메일은 <code>git config user.email</code>과 같아야 합니다. 이 줄이 없으면 업로드 때 &quot;is not in AUTHORS file&quot; 경고가 나고 리뷰어가 승인하지 못합니다. 따로 CL을 만들지 않고 같은 CL에 넣습니다.</li>
+<li>한 CL에는 한 가지 수정만 합니다. 같은 파일에서 다른 문제가 보여도 카드 댓글에 적고 넘어갑니다.</li>
+</ol>
+<figure><img src="img/diff-suid.jpg" alt="문서 한 줄을 고친 CL의 diff. 바뀐 줄이 빨강과 초록으로 보입니다" loading="lazy" decoding="async"><figcaption>문서 한 줄을 고친 CL의 diff. 바뀐 줄이 빨강과 초록으로 보입니다</figcaption></figure>
+<h2 id="4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)<a class="anchor" href="#4단계-커밋-메시지-5분" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>git commit -a</code></pre><button type="button" class="copy" data-copy="git commit -a">복사</button></div>
+<p>편집기가 열리면 아래 양식으로 씁니다. 영어로, 제목은 72자 이하, 제목 다음은 빈 줄, 본문은 72열에서 줄을 바꿉니다.</p>
+<div class="code-block"><pre><code>docs: Fix link to sysroot.md in linux/dependencies.md
+
+docs/sysroot.md was moved to docs/linux/sysroot.md, so the link in
+docs/linux/dependencies.md returns 404. Point it at the new location.
+
+Also add Gildong Hong to AUTHORS (first contribution).
+
+Bug: 538651940</code></pre><button type="button" class="copy" data-copy="docs: Fix link to sysroot.md in linux/dependencies.md
+
+docs/sysroot.md was moved to docs/linux/sysroot.md, so the link in
+docs/linux/dependencies.md returns 404. Point it at the new location.
+
+Also add Gildong Hong to AUTHORS (first contribution).
+
+Bug: 538651940">복사</button></div>
+<div class="table-wrap"><table class="stack">
+<thead>
+<tr>
+<th>규칙</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="규칙">제목</td>
+<td data-label="내용"><code>docs:</code> 접두어 + 현재형 동사(Fix, Point, Remove), 마침표 없음, 72자 이하</td>
+</tr>
+<tr>
+<td data-label="규칙">본문</td>
+<td data-label="내용">무엇이 왜 깨졌고 어디로 옮겼는지. 옮긴 커밋이나 CL 번호를 알면 적습니다</td>
+</tr>
+<tr>
+<td data-label="규칙">마지막 문단</td>
+<td data-label="내용"><code>Bug: 538651940</code> — 카드에 적힌 번호</td>
+</tr>
+<tr>
+<td data-label="규칙">넣지 않는 것</td>
+<td data-label="내용"><code>fix:</code>·<code>feat:</code> 같은 접두어, 한국어, AI 도구 서명(<code>Co-authored-by: …</code>)</td>
+</tr>
+<tr>
+<td data-label="규칙">AI 도구</td>
+<td data-label="내용">써도 됩니다(<a href="https://chromium.googlesource.com/chromium/src/+/main/agents/ai_policy.md" target="_blank" rel="noopener">Chromium AI 정책</a>). 다만 올리기 전에 diff와 설명을 직접 이해하고, 리뷰어의 질문에는 본인이 답합니다</td>
+</tr>
+</tbody></table></div>
+<p>확인은 <code>git log -1</code>, 고치려면 <code>git commit --amend</code>.</p>
+<h2 id="5단계-업로드-15분">5단계. 업로드 (15분)<a class="anchor" href="#5단계-업로드-15분" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>git cl upload -f --hashtag=hacktoberfest-seoul-2026</code></pre><button type="button" class="copy" data-copy="git cl upload -f --hashtag=hacktoberfest-seoul-2026">복사</button></div>
+<ul>
+<li><code>-f</code>는 설명 편집기와 질문을 건너뛰고 커밋 메시지를 그대로 CL 설명으로 씁니다. AUTHORS 경고 같은 presubmit 경고도 넘어가므로 4단계까지 제대로 해 둡니다. presubmit 오류(ERROR)가 있으면 아무것도 올라가지 않습니다.</li>
+<li>처음 올린 CL은 WIP(Work in progress)입니다. 리뷰어에게 메일이 가지 않고 리뷰어 대시보드에도 뜨지 않습니다. 출력 끝의 <code>https://chromium-review.googlesource.com/c/chromium/src/+/&lt;번호&gt;</code>가 내 CL입니다. 잊었으면 <code>git cl issue</code>.</li>
+<li>멘토에게 CL 번호를 알립니다. 멘토가 내용을 보고 봇 검사(CQ dry run)를 겁니다.</li>
+</ul>
+<p>올린 뒤 고칠 것이 생기면 같은 브랜치에서 고치고 <code>git commit --amend</code>, <code>git cl upload -f -t &quot;Fix typo&quot;</code> 순서로 다시 올립니다. 같은 CL에 패치셋 2가 생깁니다. 새 CL을 만들지 않습니다.</p>
+<p>리뷰어 지정은 <a href="review.html">리뷰 받기</a>에서 이어집니다.</p>
+
+    </div>
+    <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="setup.html"><span>이전</span>← 사전 준비</a><a class="next" href="review.html"><span>다음</span>리뷰 받기 →</a></nav>
+  </article>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-1분">1단계. 소스 받기 (1분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></nav></aside>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-row">
+    <nav class="footer-nav" aria-label="바닥 메뉴"><a href="index.html">가이드</a><a href="cards.html">이슈 카드</a><a href="troubleshooting.html">막혔을 때</a><a href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener">GitHub</a></nav>
+    <p>© 2026 Hacktoberfest Seoul · Chromium 테이블. 디자인은 <a href="https://github.com/OSSCA-chromium/contributions" target="_blank" rel="noopener">OSSCA Chromium</a>(MIT)을 따랐습니다.</p>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

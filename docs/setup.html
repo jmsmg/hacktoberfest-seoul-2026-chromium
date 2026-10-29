@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사전 준비 | Hacktoberfest Seoul · Chromium</title>
+<meta name="description" content="행사 전에 끝낼 계정과 도구 설치 (집에서 30~60분)">
+<meta property="og:title" content="사전 준비 | Hacktoberfest Seoul · Chromium">
+<meta property="og:description" content="행사 전에 끝낼 계정과 도구 설치 (집에서 30~60분)">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="strip" aria-hidden="true"></div>
+  <div class="container header-row">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><span></span></span><span class="brand-text">Hacktoberfest Seoul · Chromium</span></a>
+    <nav class="site-nav" aria-label="주 메뉴"><a href="index.html" aria-current="page" class="is-active">가이드</a><a href="cards.html">이슈 카드</a><a href="troubleshooting.html">막혔을 때</a></nav>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" aria-label="테마 전환"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <a class="gh-pill" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener" aria-label="GitHub 저장소"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></a>
+    </div>
+  </div>
+</header>
+<main id="main" class="container main">
+<div class="doc-layout">
+  <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html" aria-current="page" class="is-active">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
+  <article class="doc">
+    <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html" aria-current="page" class="is-active">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#1-계정-준비-10분">1. 계정 준비 (10분)</a></li><li class="lv2"><a href="#2-git-설치와-설정">2. Git 설치와 설정</a></li><li class="lv2"><a href="#3-depot_tools-설치">3. depot_tools 설치</a></li><li class="lv3"><a href="#macos">macOS</a></li><li class="lv3"><a href="#linux">Linux</a></li><li class="lv3"><a href="#windows">Windows</a></li><li class="lv2"><a href="#4-gerrit-인증-연결">4. Gerrit 인증 연결</a></li><li class="lv2"><a href="#5-준비-확인">5. 준비 확인</a></li><li class="lv2"><a href="#6-소스-미리-받기-권장">6. 소스 미리 받기 (권장)</a></li><li class="lv2"><a href="#하지-말-것과-준비물">하지 말 것과 준비물</a></li></ul></div></details>
+    <h1 class="page-title">사전 준비</h1>
+    <div class="prose">
+<p>Chromium은 GitHub가 아니라 Google 계정과 Gerrit으로 기여합니다. 아래를 행사 전에 끝내 오면 당일 한 시간 안에 CL을 올릴 수 있습니다. 집에서 30~60분, 다운로드는 약 1GB입니다. 현장에서 처음부터 하면 셋업에만 30분 넘게 걸립니다.</p>
+<h2 id="1-계정-준비-10분">1. 계정 준비 (10분)<a class="anchor" href="#1-계정-준비-10분" aria-label="이 절 링크">#</a></h2>
+<ol>
+<li><strong>Google 계정</strong> — Gmail 등 Google 계정 하나. 이 계정의 이메일이 커밋 기록에 남습니다. 회사 계정은 회사 CLA 문제가 생길 수 있어 개인 계정을 권합니다.</li>
+<li><strong>CLA 서명</strong> — <a href="https://cla.developers.google.com/about/google-individual" target="_blank" rel="noopener">Google 개인 CLA</a>에 1번 계정으로 로그인해 개인 기여자 라이선스 동의서(Individual CLA)에 서명합니다. 5분 걸립니다. 서명이 없으면 리뷰어가 승인할 수 없습니다.</li>
+<li><strong>Gerrit 로그인</strong> — <a href="https://chromium-review.googlesource.com/" target="_blank" rel="noopener">Chromium Gerrit</a>에 1번 계정으로 한 번 로그인하고, 오른쪽 위 Settings에서 Full Name을 영문 실명으로 맞춥니다. Chromium은 기여자 명단(<code>AUTHORS</code>)에 실명을 씁니다.</li>
+</ol>
+<figure><img src="img/cla-about.jpg" alt="Google 개인 CLA 안내 페이지" loading="lazy" decoding="async"><figcaption>Google 개인 CLA 안내 페이지</figcaption></figure>
+<h2 id="2-git-설치와-설정">2. Git 설치와 설정<a class="anchor" href="#2-git-설치와-설정" aria-label="이 절 링크">#</a></h2>
+<ul>
+<li>macOS: <code>xcode-select --install</code> 또는 Homebrew</li>
+<li>Windows: <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git for Windows</a></li>
+<li>Linux: 배포판의 패키지 관리자</li>
+</ul>
+<p><code>git --version</code>이 나오면 됩니다. 그다음 터미널에서 아래를 실행합니다. Windows는 cmd.exe에서 합니다.</p>
+<div class="code-block"><pre><code>git config --global user.name &quot;Gildong Hong&quot;        <span class="c"># 영문 실명, Gerrit Full Name과 같게</span>
+git config --global user.email gildong@gmail.com    <span class="c"># 1번 계정 이메일</span>
+git config --global core.autocrlf false
+git config --global core.filemode false</code></pre><button type="button" class="copy" data-copy="git config --global user.name &quot;Gildong Hong&quot;
+git config --global user.email gildong@gmail.com
+git config --global core.autocrlf false
+git config --global core.filemode false">복사</button></div>
+<h2 id="3-depot_tools-설치">3. depot_tools 설치<a class="anchor" href="#3-depot_tools-설치" aria-label="이 절 링크">#</a></h2>
+<p>depot_tools는 Chromium 개발 도구 모음이고, Gerrit 업로드 명령 <code>git cl</code>이 여기 들어 있습니다. 첫 실행 때 Python 등을 내려받아 폴더가 500~800MB가 됩니다.</p>
+<h3 id="macos">macOS<a class="anchor" href="#macos" aria-label="이 절 링크">#</a></h3>
+<div class="code-block"><pre><code>cd ~
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+echo 'export PATH=&quot;$PATH:$HOME/depot_tools&quot;' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+gclient            <span class="c"># 첫 실행에 도구를 내려받습니다. 5~10분</span></code></pre><button type="button" class="copy" data-copy="cd ~
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+echo 'export PATH=&quot;$PATH:$HOME/depot_tools&quot;' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+gclient">복사</button></div>
+<h3 id="linux">Linux<a class="anchor" href="#linux" aria-label="이 절 링크">#</a></h3>
+<div class="code-block"><pre><code>cd ~
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+echo 'export PATH=&quot;$HOME/depot_tools:$PATH&quot;' &gt;&gt; ~/.bashrc    <span class="c"># ~ 대신 $HOME</span>
+source ~/.bashrc
+gclient</code></pre><button type="button" class="copy" data-copy="cd ~
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+echo 'export PATH=&quot;$HOME/depot_tools:$PATH&quot;' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+gclient">복사</button></div>
+<h3 id="windows">Windows<a class="anchor" href="#windows" aria-label="이 절 링크">#</a></h3>
+<p>공식 안내는 <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md#install" target="_blank" rel="noopener">Windows 빌드 안내의 depot_tools 절</a>입니다.</p>
+<ol>
+<li><code>C:\src</code> 폴더를 만들고 그 안에서 <code>git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git</code>을 실행합니다. 경로에 공백이 있으면 안 됩니다.</li>
+<li>환경 변수 Path의 <strong>맨 앞</strong>에 <code>C:\src\depot_tools</code>를 넣습니다. 다른 Python·git보다 앞이어야 합니다.</li>
+<li>환경 변수 <code>DEPOT_TOOLS_WIN_TOOLCHAIN</code>을 <code>0</code>으로 추가합니다.</li>
+<li><strong>cmd.exe</strong>를 새로 열고 <code>gclient</code>를 실행합니다. PowerShell이 아닙니다. 첫 실행에 git·python을 설치합니다.</li>
+<li><code>where python3</code>에서 <code>C:\src\depot_tools\python3.bat</code>가 먼저 나오는지 봅니다. 아니면 설정 › 앱 실행 별칭에서 python.exe·python3.exe를 끕니다.</li>
+<li>WSL을 쓰면 WSL 안에 depot_tools를 따로 둡니다. Windows 쪽과 같은 폴더를 함께 쓰면 안 됩니다.</li>
+</ol>
+<h2 id="4-gerrit-인증-연결">4. Gerrit 인증 연결<a class="anchor" href="#4-gerrit-인증-연결" aria-label="이 절 링크">#</a></h2>
+<p>모든 OS에서, depot_tools를 설치한 뒤 한 번 실행합니다.</p>
+<div class="code-block"><pre><code>git config --global depot-tools.useNewAuthStack 1
+update_depot_tools
+git cl creds-check --global
+git credential-luci login        <span class="c"># 브라우저가 열리면 1번 Google 계정으로 로그인</span></code></pre><button type="button" class="copy" data-copy="git config --global depot-tools.useNewAuthStack 1
+update_depot_tools
+git cl creds-check --global
+git credential-luci login">복사</button></div>
+<h2 id="5-준비-확인">5. 준비 확인<a class="anchor" href="#5-준비-확인" aria-label="이 절 링크">#</a></h2>
+<p>세 줄이 모두 되면 끝입니다.</p>
+<div class="code-block"><pre><code>git cl help                     <span class="c"># depot_tools 명령 목록이 나옵니다</span>
+git credential-luci info        <span class="c"># 1번 계정 이메일이 보입니다</span>
+git ls-remote https://chromium.googlesource.com/chromiumos/manifest.git HEAD   <span class="c"># 비밀번호를 묻지 않고 한 줄이 나옵니다</span></code></pre><button type="button" class="copy" data-copy="git cl help
+git credential-luci info
+git ls-remote https://chromium.googlesource.com/chromiumos/manifest.git HEAD">복사</button></div>
+<h2 id="6-소스-미리-받기-권장">6. 소스 미리 받기 (권장)<a class="anchor" href="#6-소스-미리-받기-권장" aria-label="이 절 링크">#</a></h2>
+<p>1분, 252MB입니다. 행사장 네트워크를 아끼고 당일 바로 시작할 수 있습니다. 명령의 뜻은 <a href="first-cl.html">첫 CL 올리기</a> 1단계에 있습니다.</p>
+<div class="code-block"><pre><code>cd ~              <span class="c"># Windows: cd C:\src</span>
+git clone --depth=1 --filter=blob:none --sparse https://chromium.googlesource.com/chromium/src
+cd src
+git sparse-checkout set docs infra build/ios build/util tools/android/infobar_deprecation tools/checkperms tools/metrics tools/python tools/resources tools/web_dev_style</code></pre><button type="button" class="copy" data-copy="cd ~
+git clone --depth=1 --filter=blob:none --sparse https://chromium.googlesource.com/chromium/src
+cd src
+git sparse-checkout set docs infra build/ios build/util tools/android/infobar_deprecation tools/checkperms tools/metrics tools/python tools/resources tools/web_dev_style">복사</button></div>
+<h2 id="하지-말-것과-준비물">하지 말 것과 준비물<a class="anchor" href="#하지-말-것과-준비물" aria-label="이 절 링크">#</a></h2>
+<ul>
+<li><code>fetch chromium</code>이나 <code>gclient sync</code>는 실행하지 마세요. 전체 소스 수십 GB를 몇 시간 동안 받습니다.</li>
+<li>회사 노트북은 프록시나 보안 소프트웨어가 googlesource.com 접속을 막을 수 있습니다. 개인 노트북을 권합니다.</li>
+<li>노트북과 충전기를 가져오고, 1번 Google 계정에 로그인된 브라우저를 준비해 주세요.</li>
+<li>막히면 당일 14:40 조 편성 직후 멘토에게 말해 주세요. 셋업 도움은 15:00 전에 끝내는 것이 목표입니다.</li>
+</ul>
+
+    </div>
+    <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="start.html"><span>이전</span>← 시작하기</a><a class="next" href="first-cl.html"><span>다음</span>첫 CL 올리기 →</a></nav>
+  </article>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#1-계정-준비-10분">1. 계정 준비 (10분)</a></li><li class="lv2"><a href="#2-git-설치와-설정">2. Git 설치와 설정</a></li><li class="lv2"><a href="#3-depot_tools-설치">3. depot_tools 설치</a></li><li class="lv3"><a href="#macos">macOS</a></li><li class="lv3"><a href="#linux">Linux</a></li><li class="lv3"><a href="#windows">Windows</a></li><li class="lv2"><a href="#4-gerrit-인증-연결">4. Gerrit 인증 연결</a></li><li class="lv2"><a href="#5-준비-확인">5. 준비 확인</a></li><li class="lv2"><a href="#6-소스-미리-받기-권장">6. 소스 미리 받기 (권장)</a></li><li class="lv2"><a href="#하지-말-것과-준비물">하지 말 것과 준비물</a></li></ul></nav></aside>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-row">
+    <nav class="footer-nav" aria-label="바닥 메뉴"><a href="index.html">가이드</a><a href="cards.html">이슈 카드</a><a href="troubleshooting.html">막혔을 때</a><a href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener">GitHub</a></nav>
+    <p>© 2026 Hacktoberfest Seoul · Chromium 테이블. 디자인은 <a href="https://github.com/OSSCA-chromium/contributions" target="_blank" rel="noopener">OSSCA Chromium</a>(MIT)을 따랐습니다.</p>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
