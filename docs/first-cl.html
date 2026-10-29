@@ -34,10 +34,42 @@
   <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html" aria-current="page" class="is-active">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
   <article class="doc">
     <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html" aria-current="page" class="is-active">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
-    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-12분">1단계. 소스 받기 (1~2분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#첫-cl에서만-하는-것">첫 CL에서만 하는 것</a></li><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-12분">1단계. 소스 받기 (1~2분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></div></details>
     <h1 class="page-title">첫 CL 올리기</h1>
     <div class="prose">
 <p>Chromium 문서의 깨진 링크 하나를 고쳐 Gerrit에 CL을 올립니다. 아래 예시는 1번 카드 <code>docs/linux/dependencies.md</code>로 설명합니다. 내 <a href="cards.html">카드</a>의 파일과 경로로 바꿔 읽으세요.</p>
+<h2 id="첫-cl에서만-하는-것">첫 CL에서만 하는 것<a class="anchor" href="#첫-cl에서만-하는-것" aria-label="이 절 링크">#</a></h2>
+<p>Chromium에 처음 올리는 CL에는 아래 네 가지가 더 들어갑니다. 두 번째 CL부터는 필요 없습니다.</p>
+<div class="table-wrap"><table class="stack">
+<thead>
+<tr>
+<th>할 일</th>
+<th>어디서</th>
+<th>왜</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="할 일">개인 CLA 서명</td>
+<td data-label="어디서"><a href="setup.html">사전 준비</a> 2번</td>
+<td data-label="왜">서명이 없으면 리뷰어가 받아 줄 수 없습니다. 리뷰어가 CLA를 확인합니다</td>
+</tr>
+<tr>
+<td data-label="할 일"><code>AUTHORS</code>에 이름 한 줄</td>
+<td data-label="어디서">3단계</td>
+<td data-label="왜">첫 기여자는 같은 CL에 자기 이름을 넣습니다. AUTHORS만 따로 올리지 않습니다</td>
+</tr>
+<tr>
+<td data-label="할 일">커밋 메시지에 AUTHORS 추가를 밝히기</td>
+<td data-label="어디서">4단계</td>
+<td data-label="왜">본문 끝에 <code>Also add &lt;이름&gt; to AUTHORS (first contribution).</code> 한 줄을 씁니다</td>
+</tr>
+<tr>
+<td data-label="할 일">리뷰 요청 메시지에 첫 기여라고 쓰기</td>
+<td data-label="어디서"><a href="review.html">리뷰 받기</a></td>
+<td data-label="왜">리뷰어가 CLA와 AUTHORS를 먼저 확인하고, 처음인 만큼 설명을 더 친절하게 해 줍니다</td>
+</tr>
+</tbody></table></div>
+<p>AUTHORS의 이메일은 커밋 이메일과 같아야 하고, 이름은 Gerrit 계정의 Full Name과 맞춰 씁니다.</p>
 <h2 id="0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)<a class="anchor" href="#0단계-시작-전-점검-5분" aria-label="이 절 링크">#</a></h2>
 <p>네 줄을 차례로 실행합니다. 하나라도 안 되면 손을 들고, 셋업이 20분을 넘기면 <a href="troubleshooting.html">막혔을 때</a>의 대안으로 갑니다.</p>
 <div class="code-block"><pre><code>git --version                     <span class="c"># 2.x 면 됩니다</span>
@@ -144,7 +176,7 @@ Bug: 538651940">복사</button></div>
     </div>
     <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="setup.html"><span>이전</span>← 사전 준비</a><a class="next" href="review.html"><span>다음</span>리뷰 받기 →</a></nav>
   </article>
-  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-12분">1단계. 소스 받기 (1~2분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></nav></aside>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#첫-cl에서만-하는-것">첫 CL에서만 하는 것</a></li><li class="lv2"><a href="#0단계-시작-전-점검-5분">0단계. 시작 전 점검 (5분)</a></li><li class="lv2"><a href="#1단계-소스-받기-12분">1단계. 소스 받기 (1~2분)</a></li><li class="lv2"><a href="#2단계-이슈-고르기와-원인-찾기-10분">2단계. 이슈 고르기와 원인 찾기 (10분)</a></li><li class="lv2"><a href="#3단계-브랜치-만들고-고치기-15분">3단계. 브랜치 만들고 고치기 (15분)</a></li><li class="lv2"><a href="#4단계-커밋-메시지-5분">4단계. 커밋 메시지 (5분)</a></li><li class="lv2"><a href="#5단계-업로드-15분">5단계. 업로드 (15분)</a></li></ul></nav></aside>
 </div>
 </main>
 <footer class="site-footer">
