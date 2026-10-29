@@ -108,6 +108,16 @@
 <td data-label="해결">Gerrit에서 Start Review</td>
 </tr>
 <tr>
+<td data-label="증상"><code>CV cannot start a Run … not a committer</code> 또는 <code>not a dry-runner</code></td>
+<td data-label="원인">참가자가 CQ 버튼을 눌렀다</td>
+<td data-label="해결">그대로 두고 멘토에게 알립니다. 커미터가 대신 겁니다</td>
+</tr>
+<tr>
+<td data-label="증상"><code>CV cannot start a Run … Review-Enforcement</code></td>
+<td data-label="원인">+1이 두 개 모이기 전에 CQ +2를 걸었다</td>
+<td data-label="해결">두 번째 +1을 기다립니다</td>
+</tr>
+<tr>
 <td data-label="증상"><code>git cl upload</code>가 업스트림이 없다고 한다</td>
 <td data-label="원인">브랜치를 <code>git checkout -b</code>로 만들었다</td>
 <td data-label="해결"><code>git branch --set-upstream-to=origin/main</code></td>

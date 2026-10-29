@@ -63,15 +63,19 @@
 </tr>
 <tr>
 <td data-label="용어">커미터</td>
-<td data-label="뜻">Chromium에 직접 머지할 권한이 있는 사람. 커미터가 아닌 사람의 CL은 커미터 두 명의 +1이 필요합니다</td>
+<td data-label="뜻">다른 사람의 CL에 +1을 주고 Commit-Queue +2로 머지를 걸 수 있는 사람. 커미터가 아닌 사람의 CL은 커미터 두 명의 +1이 필요합니다</td>
 </tr>
 <tr>
 <td data-label="용어">Code-Review +1</td>
 <td data-label="뜻">리뷰어의 승인. LGTM(Looks Good To Me)이라고도 합니다</td>
 </tr>
 <tr>
+<td data-label="용어">Ready to submit</td>
+<td data-label="뜻">승인 조건(+1 두 개, OWNERS)이 다 찬 CL에 Gerrit이 붙이는 표시. 그 뒤에 커미터가 Submit to CQ를 누릅니다</td>
+</tr>
+<tr>
 <td data-label="용어">CQ (Commit Queue)</td>
-<td data-label="뜻">빌드와 테스트를 돌리고 통과하면 머지하는 봇. Commit-Queue +2는 머지, +1(dry run)은 검사만 요청합니다</td>
+<td data-label="뜻">빌드와 테스트를 돌리고 통과하면 머지하는 봇. Commit-Queue +2는 머지, +1(dry run)은 검사만 요청합니다. +2는 커미터가, +1은 트라이잡 권한이 있는 사람이 걸어야 봇이 받아 줍니다</td>
 </tr>
 <tr>
 <td data-label="용어">presubmit</td>
