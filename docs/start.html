@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>시작하기 | Hacktoberfest Seoul · Chromium</title>
-<meta name="description" content="오늘 하는 일, 일정, 결과물">
+<meta name="description" content="오늘 하는 일과 결과물, 전체 흐름">
 <meta property="og:title" content="시작하기 | Hacktoberfest Seoul · Chromium">
-<meta property="og:description" content="오늘 하는 일, 일정, 결과물">
+<meta property="og:description" content="오늘 하는 일과 결과물, 전체 흐름">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/favicon.png">
@@ -34,7 +34,7 @@
   <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html" aria-current="page" class="is-active">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
   <article class="doc">
     <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html" aria-current="page" class="is-active">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
-    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#오늘의-결과물">오늘의 결과물</a></li><li class="lv2"><a href="#일정">일정</a></li><li class="lv2"><a href="#전체-흐름">전체 흐름</a></li><li class="lv2"><a href="#github가-아닙니다">GitHub가 아닙니다</a></li></ul></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#오늘의-결과물">오늘의 결과물</a></li><li class="lv2"><a href="#전체-흐름">전체 흐름</a></li><li class="lv2"><a href="#github가-아닙니다">GitHub가 아닙니다</a></li></ul></div></details>
     <h1 class="page-title">시작하기</h1>
     <div class="prose">
 <p>Chromium 테이블에서는 Chromium 문서(<code>docs/</code>)에서 없는 파일을 가리키는 링크 한 줄을 고쳐 Gerrit에 CL을 올립니다. 전체 소스를 받거나 빌드하지 않고, 문서 폴더만 1분 안에 받습니다.</p>
@@ -44,67 +44,6 @@
 <li>머지는 리뷰를 받은 뒤입니다. 커미터 두 명이 +1을 주고 커미터가 Commit-Queue +2를 걸면 봇이 검사하고 머지합니다. 참가자가 직접 머지할 수는 없습니다.</li>
 <li>머지되면 메일이 오고, Chromium 커밋 기록과 <code>AUTHORS</code> 파일에 내 이름이 남습니다.</li>
 </ul>
-<h2 id="일정">일정<a class="anchor" href="#일정" aria-label="이 절 링크">#</a></h2>
-<p>10월 31일(토), 테헤란로 311 3층. 주차는 안 됩니다.</p>
-<div class="table-wrap"><table class="stack">
-<thead>
-<tr>
-<th>시각</th>
-<th>할 일</th>
-<th>끝나면 손에 있는 것</th>
-</tr>
-</thead>
-<tbody><tr>
-<td data-label="시각">14:20</td>
-<td data-label="할 일">프로젝트 소개 5분</td>
-<td data-label="끝나면 손에 있는 것"></td>
-</tr>
-<tr>
-<td data-label="시각">14:40</td>
-<td data-label="할 일">조 편성, 자리 잡고 바로 0단계 점검</td>
-<td data-label="끝나면 손에 있는 것">셋업 OK 또는 도움 필요</td>
-</tr>
-<tr>
-<td data-label="시각">15:00~15:10</td>
-<td data-label="할 일">0단계 점검, 1단계 소스 받기</td>
-<td data-label="끝나면 손에 있는 것"><code>src/</code> 폴더</td>
-</tr>
-<tr>
-<td data-label="시각">15:10~15:20</td>
-<td data-label="할 일">2단계 이슈 카드 고르기, 원인 찾기</td>
-<td data-label="끝나면 손에 있는 것">무엇을 어디로 바꿀지</td>
-</tr>
-<tr>
-<td data-label="시각">15:20~15:45</td>
-<td data-label="할 일">3단계 수정과 AUTHORS, 4단계 커밋</td>
-<td data-label="끝나면 손에 있는 것">커밋 1개</td>
-</tr>
-<tr>
-<td data-label="시각">15:45~16:00</td>
-<td data-label="할 일">5단계 업로드(WIP), 멘토 확인</td>
-<td data-label="끝나면 손에 있는 것">CL 링크</td>
-</tr>
-<tr>
-<td data-label="시각">16:00~16:30</td>
-<td data-label="할 일">쉬는 시간</td>
-<td data-label="끝나면 손에 있는 것"></td>
-</tr>
-<tr>
-<td data-label="시각">16:30~16:50</td>
-<td data-label="할 일">못 올린 사람 마무리, Start Review와 리뷰어 지정</td>
-<td data-label="끝나면 손에 있는 것">리뷰 요청된 CL</td>
-</tr>
-<tr>
-<td data-label="시각">16:50~17:20</td>
-<td data-label="할 일">리뷰 대응법, 원하는 사람은 두 번째 카드</td>
-<td data-label="끝나면 손에 있는 것"></td>
-</tr>
-<tr>
-<td data-label="시각">17:20</td>
-<td data-label="할 일">CL 링크를 카드 댓글과 멘토에게</td>
-<td data-label="끝나면 손에 있는 것"></td>
-</tr>
-</tbody></table></div>
 <h2 id="전체-흐름">전체 흐름<a class="anchor" href="#전체-흐름" aria-label="이 절 링크">#</a></h2>
 <ol>
 <li><a href="setup.html">사전 준비</a> — Google 계정, CLA 서명, Gerrit 로그인, depot_tools. 집에서 30~60분 걸립니다.</li>
@@ -121,7 +60,7 @@
     </div>
     <nav class="pager" aria-label="이전 다음 문서"><span></span><a class="next" href="setup.html"><span>다음</span>사전 준비 →</a></nav>
   </article>
-  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#오늘의-결과물">오늘의 결과물</a></li><li class="lv2"><a href="#일정">일정</a></li><li class="lv2"><a href="#전체-흐름">전체 흐름</a></li><li class="lv2"><a href="#github가-아닙니다">GitHub가 아닙니다</a></li></ul></nav></aside>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#오늘의-결과물">오늘의 결과물</a></li><li class="lv2"><a href="#전체-흐름">전체 흐름</a></li><li class="lv2"><a href="#github가-아닙니다">GitHub가 아닙니다</a></li></ul></nav></aside>
 </div>
 </main>
 <footer class="site-footer">
