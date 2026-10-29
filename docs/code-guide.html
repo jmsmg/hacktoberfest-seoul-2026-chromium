@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>코드 기여 가이드 | Hacktoberfest Seoul · Chromium</title>
+<meta name="description" content="문서 다음 단계. 쉬운 정리부터 한 단계씩, 일감 찾는 법과 확인 방법">
+<meta property="og:title" content="코드 기여 가이드 | Hacktoberfest Seoul · Chromium">
+<meta property="og:description" content="문서 다음 단계. 쉬운 정리부터 한 단계씩, 일감 찾는 법과 확인 방법">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="strip" aria-hidden="true"></div>
+  <div class="container header-row">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><span></span></span><span class="brand-text">Hacktoberfest Seoul · Chromium</span></a>
+    <nav class="site-nav" aria-label="주 메뉴"><a href="index.html">가이드</a><a href="rules.html">규칙</a><a href="cards.html">이슈 카드</a><a href="code-guide.html" aria-current="page" class="is-active">코드 기여</a><a href="troubleshooting.html">막혔을 때</a><a href="faq.html">FAQ</a></nav>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" aria-label="테마 전환"><span class="sun">☀️</span><span class="moon">🌙</span></button>
+      <a class="gh-pill" href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener" aria-label="GitHub 저장소"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>GitHub</span></a>
+    </div>
+  </div>
+</header>
+<main id="main" class="container main">
+<div class="doc-layout">
+  <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html" aria-current="page" class="is-active">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
+  <article class="doc">
+    <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html" aria-current="page" class="is-active">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#난이도-순서">난이도 순서</a></li><li class="lv2"><a href="#공통-준비">공통 준비</a></li><li class="lv2"><a href="#단계별로-일감-찾기">단계별로 일감 찾기</a></li><li class="lv3"><a href="#2단계-안-쓰는-include-만료된-notfataluntil">2단계. 안 쓰는 include, 만료된 NotFatalUntil</a></li><li class="lv3"><a href="#3단계-헤더api-교체">3단계. 헤더·API 교체</a></li><li class="lv3"><a href="#4단계-만료-히스토그램">4단계. 만료 히스토그램</a></li><li class="lv3"><a href="#5단계-만료된-kill-switchflag">5단계. 만료된 kill switch·flag</a></li><li class="lv3"><a href="#6단계-수명과-동작을-따지는-수정">6단계. 수명과 동작을 따지는 수정</a></li><li class="lv2"><a href="#커밋-메시지">커밋 메시지</a></li><li class="lv2"><a href="#리뷰-받을-때">리뷰 받을 때</a></li></ul></div></details>
+    <h1 class="page-title">코드 기여 가이드</h1>
+    <div class="prose">
+<p>문서 링크를 고쳐 봤다면 다음은 코드입니다. Chromium에는 처음 오는 사람도 할 수 있는 정리 작업이 많습니다. 아래 순서대로 한 단계씩 올라가는 것을 권합니다. 2단계부터는 Chromium 전체를 받아 빌드해야 하므로 집에서 합니다.</p>
+<h2 id="난이도-순서">난이도 순서<a class="anchor" href="#난이도-순서" aria-label="이 절 링크">#</a></h2>
+<div class="table-wrap"><table class="stack">
+<thead>
+<tr>
+<th>단계</th>
+<th>할 일</th>
+<th>확인 방법</th>
+<th>동작 변화</th>
+<th>리뷰에서 필요한 것</th>
+</tr>
+</thead>
+<tbody><tr>
+<td data-label="단계">1</td>
+<td data-label="할 일">문서 링크 고치기</td>
+<td data-label="확인 방법">링크 눌러 보기</td>
+<td data-label="동작 변화">없음</td>
+<td data-label="리뷰에서 필요한 것">커미터 누구나</td>
+</tr>
+<tr>
+<td data-label="단계">2</td>
+<td data-label="할 일">안 쓰는 include, 만료된 NotFatalUntil 인자 지우기</td>
+<td data-label="확인 방법">컴파일</td>
+<td data-label="동작 변화">없음</td>
+<td data-label="리뷰에서 필요한 것">그 폴더 OWNERS</td>
+</tr>
+<tr>
+<td data-label="단계">3</td>
+<td data-label="할 일">헤더·API 교체</td>
+<td data-label="확인 방법">빌드와 단위 테스트</td>
+<td data-label="동작 변화">같은 결과가 나와야 함</td>
+<td data-label="리뷰에서 필요한 것">폴더 OWNERS와 API 담당자</td>
+</tr>
+<tr>
+<td data-label="단계">4</td>
+<td data-label="할 일">만료 히스토그램 지우기</td>
+<td data-label="확인 방법">빌드와 XML presubmit</td>
+<td data-label="동작 변화">사용자에게 안 보임</td>
+<td data-label="리뷰에서 필요한 것">그 지표 담당자</td>
+</tr>
+<tr>
+<td data-label="단계">5</td>
+<td data-label="할 일">만료된 kill switch·flag 지우기</td>
+<td data-label="확인 방법">빌드와 테스트</td>
+<td data-label="동작 변화">켜진 동작으로 굳어짐</td>
+<td data-label="리뷰에서 필요한 것">기능 담당자의 출시 완료 확인</td>
+</tr>
+<tr>
+<td data-label="단계">6</td>
+<td data-label="할 일">수명과 동작을 따지는 수정</td>
+<td data-label="확인 방법">직접 설계한 테스트</td>
+<td data-label="동작 변화">바뀜</td>
+<td data-label="리뷰에서 필요한 것">멘토와 일대일로</td>
+</tr>
+</tbody></table></div>
+<p>가장 큰 벽은 1단계에서 2단계로 넘어갈 때입니다. 여기서부터 전체 체크아웃과 빌드가 필요합니다. 2단계와 3단계는 <a href="code.html">코드 카드</a> 10장으로 바로 해 볼 수 있습니다.</p>
+<h2 id="공통-준비">공통 준비<a class="anchor" href="#공통-준비" aria-label="이 절 링크">#</a></h2>
+<ul>
+<li><strong>받기와 빌드 준비:</strong> <a href="code.html">코드 카드 안내 1단계</a>에 운영체제별 공식 안내와 빠르게 빌드하는 <code>gn args</code>가 있습니다.</li>
+<li><strong>빌드와 테스트:</strong> 바꾼 파일이 들어 있는 테스트 타깃을 빌드하고, 그 테스트만 골라 돌립니다.</li>
+</ul>
+<div class="code-block"><pre><code>gn refs out/Default //net/cert/cert_verify_proc.cc   <span class="c"># 이 파일을 쓰는 타깃 찾기</span>
+autoninja -C out/Default net_unittests
+out/Default/net_unittests --gtest_filter='CertVerifyProc*'
+autoninja -C out/Default ../../net/cert/cert_verify_proc.cc^   <span class="c"># 파일 하나만 컴파일</span></code></pre><button type="button" class="copy" data-copy="gn refs out/Default //net/cert/cert_verify_proc.cc
+autoninja -C out/Default net_unittests
+out/Default/net_unittests --gtest_filter='CertVerifyProc*'
+autoninja -C out/Default ../../net/cert/cert_verify_proc.cc^">복사</button></div>
+<ul>
+<li><strong>올리기 전:</strong> <code>git cl format</code>으로 모양을 맞추고, 바꾼 코드를 지나는 테스트가 통과하는지 봅니다.</li>
+</ul>
+<h2 id="단계별로-일감-찾기">단계별로 일감 찾기<a class="anchor" href="#단계별로-일감-찾기" aria-label="이 절 링크">#</a></h2>
+<h3 id="2단계-안-쓰는-include-만료된-notfataluntil">2단계. 안 쓰는 include, 만료된 NotFatalUntil<a class="anchor" href="#2단계-안-쓰는-include-만료된-notfataluntil" aria-label="이 절 링크">#</a></h3>
+<ul>
+<li><strong>include:</strong> 진행 중인 이전 작업에서 남은 파일을 찾습니다. 예를 들어 crypto/hash 이전(<a href="https://issues.chromium.org/issues/372283556" target="_blank" rel="noopener">이슈 372283556</a>)에서 옛 헤더만 남은 파일이 <a href="code.html">코드 카드</a> C1~C5입니다.</li>
+<li><strong>NotFatalUntil:</strong> <code>CHECK(조건, base::NotFatalUntil::M152)</code>는 M152부터 이미 크래시하는 CHECK라 인자만 남은 상태입니다. 지금 main의 마일스톤은 <code>chrome/VERSION</code>의 MAJOR로 봅니다(10월 29일 기준 159).</li>
+</ul>
+<div class="code-block"><pre><code>git grep -n &quot;NotFatalUntil::M15[2-8]&quot; -- '*.cc' '*.h'</code></pre><button type="button" class="copy" data-copy="git grep -n &quot;NotFatalUntil::M15[2-8]&quot; -- '*.cc' '*.h'">복사</button></div>
+<ul>
+<li>base에 정리 스크립트(<code>base/tools/clean-up-not-fatal-until.py -m &lt;M&gt;</code>)가 있고 base OWNERS가 가끔 한꺼번에 지웁니다. 폴더 하나를 골라 <code>git log</code>로 최근 정리와 겹치지 않는지 보고 그 폴더만 정리합니다.</li>
+<li>예: <a href="https://crrev.com/c/8264232" target="_blank" rel="noopener">8264232</a> include 지우기, <a href="https://crrev.com/c/8377550" target="_blank" rel="noopener">8377550</a> quota CHECK의 M148 인자 지우기.</li>
+</ul>
+<h3 id="3단계-헤더api-교체">3단계. 헤더·API 교체<a class="anchor" href="#3단계-헤더api-교체" aria-label="이 절 링크">#</a></h3>
+<ul>
+<li>옛 API를 새 API로 옮기는 버그를 따라갑니다. 예: crypto/hash 이전(372283556), sql::Statement 시간 접근자(40176243). 버그에 붙은 머지된 CL을 보면 바꾸는 법이 정해져 있습니다.</li>
+<li>바꾼 뒤에도 결과가 같다는 것을 테스트로 확인하고, 저장 형식이나 값이 바뀌지 않는 이유를 커밋 메시지에 씁니다.</li>
+<li>예: <a href="https://crrev.com/c/8474691" target="_blank" rel="noopener">8474691</a> 손으로 하던 시간 변환을 <code>ColumnTime()</code>·<code>BindTime()</code>으로 교체.</li>
+</ul>
+<h3 id="4단계-만료-히스토그램">4단계. 만료 히스토그램<a class="anchor" href="#4단계-만료-히스토그램" aria-label="이 절 링크">#</a></h3>
+<ul>
+<li>히스토그램은 histograms.xml의 <code>expires_after</code>가 지나면 기록하는 코드가 죽은 코드가 됩니다. <a href="https://chromium.googlesource.com/chromium/src/+/main/tools/metrics/histograms/README.md" target="_blank" rel="noopener">히스토그램 README</a>에 만료되면 기록 코드를 지우고 XML도 정리하라고 적혀 있습니다.</li>
+</ul>
+<div class="code-block"><pre><code>git grep -nE 'expires_after=&quot;(M1[0-4][0-9]|202[0-4]-)' -- tools/metrics/histograms/metadata/   <span class="c"># 오래전에 만료된 것</span></code></pre><button type="button" class="copy" data-copy="git grep -nE 'expires_after=&quot;(M1[0-4][0-9]|202[0-4]-)' -- tools/metrics/histograms/metadata/">복사</button></div>
+<ul>
+<li>일부러 만료시켜 두고 코드를 남긴 것은 XML에 표시가 있으니 건너뜁니다. 기록하는 코드, XML 항목, 그 히스토그램만 쓰던 enum을 함께 지웁니다.</li>
+<li>예: <a href="https://crrev.com/c/8505716" target="_blank" rel="noopener">8505716</a> 만료된 Arc.NearbyShare 히스토그램 6개 지우기.</li>
+</ul>
+<h3 id="5단계-만료된-kill-switchflag">5단계. 만료된 kill switch·flag<a class="anchor" href="#5단계-만료된-kill-switchflag" aria-label="이 절 링크">#</a></h3>
+<ul>
+<li>kill switch는 새 동작을 켜 두면서 문제가 생기면 끌 수 있게 남긴 스위치입니다. 정해 둔 마일스톤이 지나고 기본값으로 켜져 있으면 스위치를 지우고 켜진 동작만 남깁니다.</li>
+<li>&quot;M1xx 뒤에 지운다&quot; 같은 주석이나, <code>chrome/browser/flag-metadata.json</code>에서 <code>expiry_milestone</code>이 지난 flag를 찾습니다. flag를 지우는 법은 <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/flag_expiry.md" target="_blank" rel="noopener">flag 만료 문서</a>에 있습니다.</li>
+</ul>
+<div class="code-block"><pre><code>git grep -nEi '(remove|delete)[^.]{0,40}(after|once|in|by) M1[0-5][0-9]' -- '*.cc' '*.h'</code></pre><button type="button" class="copy" data-copy="git grep -nEi '(remove|delete)[^.]{0,40}(after|once|in|by) M1[0-5][0-9]' -- '*.cc' '*.h'">복사</button></div>
+<ul>
+<li>지우기 전에 기능 담당자에게 출시가 끝났는지 먼저 묻습니다. 서버 쪽 실험으로 아직 끄고 있을 수 있어서, 밖에서는 알 수 없습니다.</li>
+<li>예: <a href="https://crrev.com/c/8457502" target="_blank" rel="noopener">8457502</a> M133 뒤에 지우기로 했던 FFmpeg kill switch 지우기.</li>
+</ul>
+<h3 id="6단계-수명과-동작을-따지는-수정">6단계. 수명과 동작을 따지는 수정<a class="anchor" href="#6단계-수명과-동작을-따지는-수정" aria-label="이 절 링크">#</a></h3>
+<ul>
+<li>정해진 방법이 없습니다. 호출부를 모두 읽고 불변식을 증명하거나, 오류 처리와 테스트를 직접 설계해야 합니다. 리뷰도 여러 번 오갑니다.</li>
+<li>예: <a href="https://crrev.com/c/8278112" target="_blank" rel="noopener">8278112</a> WeakPtr를 확인하던 DCHECK를 CHECK로, <a href="https://crrev.com/c/8282239" target="_blank" rel="noopener">8282239</a> QuotaDatabase를 scoped <code>sql::Transaction</code>으로.</li>
+<li>5단계까지 해 본 뒤 멘토와 일대일로 고르는 것을 권합니다.</li>
+</ul>
+<h2 id="커밋-메시지">커밋 메시지<a class="anchor" href="#커밋-메시지" aria-label="이 절 링크">#</a></h2>
+<p>코드 CL에는 무엇을 왜 바꿨는지, 동작이 바뀌지 않는다면 그 근거를 씁니다.</p>
+<div class="code-block"><pre><code>[storage] Remove expired NotFatalUntil::M148 from quota CHECKs
+
+M148 is long past, so the argument no longer has any effect.
+
+Bug: none</code></pre><button type="button" class="copy" data-copy="[storage] Remove expired NotFatalUntil::M148 from quota CHECKs
+M148 is long past, so the argument no longer has any effect.
+Bug: none">복사</button></div>
+<ul>
+<li>제목 앞의 <code>[컴포넌트]</code>나 <code>폴더:</code> 접두어는 그 폴더의 최근 커밋을 따라 씁니다. <code>git log --oneline -- &lt;폴더&gt;</code>로 봅니다.</li>
+<li>관련 버그가 있으면 <code>Bug: &lt;번호&gt;</code>, 그 CL로 버그가 끝나면 <code>Fixed: &lt;번호&gt;</code>, 없으면 <code>Bug: none</code>을 씁니다.</li>
+</ul>
+<h2 id="리뷰-받을-때">리뷰 받을 때<a class="anchor" href="#리뷰-받을-때" aria-label="이 절 링크">#</a></h2>
+<ul>
+<li>그 폴더의 OWNERS가 한 명 있어야 승인이 됩니다. <code>git cl owners</code>나 Gerrit 리뷰어 칸의 OWNERS 제안으로 찾습니다.</li>
+<li>커미터가 아니면 커미터 두 명의 +1이 필요합니다. 폴더 OWNERS 한 명과, 그 이전 작업을 이끄는 사람이나 다른 OWNERS 한 명을 넣습니다.</li>
+<li>참가자 계정은 dry run도 CQ+2도 걸 수 없으니 Start Review 메시지에 부탁합니다. 예시 문장은 <a href="code.html">코드 카드 안내 6단계</a>에 있습니다.</li>
+<li>그 뒤 흐름은 <a href="review.html">리뷰 받기</a>와 같습니다.</li>
+</ul>
+
+    </div>
+    <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="cards.html"><span>이전</span>← 이슈 카드</a><a class="next" href="code.html"><span>다음</span>코드 카드 (집에서) →</a></nav>
+  </article>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#난이도-순서">난이도 순서</a></li><li class="lv2"><a href="#공통-준비">공통 준비</a></li><li class="lv2"><a href="#단계별로-일감-찾기">단계별로 일감 찾기</a></li><li class="lv3"><a href="#2단계-안-쓰는-include-만료된-notfataluntil">2단계. 안 쓰는 include, 만료된 NotFatalUntil</a></li><li class="lv3"><a href="#3단계-헤더api-교체">3단계. 헤더·API 교체</a></li><li class="lv3"><a href="#4단계-만료-히스토그램">4단계. 만료 히스토그램</a></li><li class="lv3"><a href="#5단계-만료된-kill-switchflag">5단계. 만료된 kill switch·flag</a></li><li class="lv3"><a href="#6단계-수명과-동작을-따지는-수정">6단계. 수명과 동작을 따지는 수정</a></li><li class="lv2"><a href="#커밋-메시지">커밋 메시지</a></li><li class="lv2"><a href="#리뷰-받을-때">리뷰 받을 때</a></li></ul></nav></aside>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-row">
+    <nav class="footer-nav" aria-label="바닥 메뉴"><a href="index.html">가이드</a><a href="rules.html">규칙</a><a href="cards.html">이슈 카드</a><a href="code-guide.html">코드 기여</a><a href="troubleshooting.html">막혔을 때</a><a href="faq.html">FAQ</a><a href="https://github.com/jmsmg/hacktoberfest-seoul-2026-chromium" target="_blank" rel="noopener">GitHub</a></nav>
+    <p>© 2026 Hacktoberfest Seoul · Chromium 테이블. 디자인은 <a href="https://github.com/OSSCA-chromium/contributions" target="_blank" rel="noopener">OSSCA Chromium</a>(MIT)을 따랐습니다.</p>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
