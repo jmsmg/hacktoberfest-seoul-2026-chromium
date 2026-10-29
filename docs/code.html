@@ -34,24 +34,12 @@
   <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html">코드 기여 가이드</a></li><li><a href="code.html" aria-current="page" class="is-active">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
   <article class="doc">
     <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html">코드 기여 가이드</a></li><li><a href="code.html" aria-current="page" class="is-active">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
-    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#준비물">준비물</a></li><li class="lv2"><a href="#1단계-받고-빌드-준비">1단계. 받고 빌드 준비</a></li><li class="lv2"><a href="#2단계-카드-고르기">2단계. 카드 고르기</a></li><li class="lv2"><a href="#3단계-고치기">3단계. 고치기</a></li><li class="lv2"><a href="#4단계-빌드하고-테스트">4단계. 빌드하고 테스트</a></li><li class="lv2"><a href="#5단계-커밋과-업로드">5단계. 커밋과 업로드</a></li><li class="lv2"><a href="#6단계-리뷰-요청">6단계. 리뷰 요청</a></li></ul></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#1단계-받고-빌드-준비">1단계. 받고 빌드 준비</a></li><li class="lv2"><a href="#2단계-카드-고르기">2단계. 카드 고르기</a></li><li class="lv2"><a href="#3단계-고치기">3단계. 고치기</a></li><li class="lv2"><a href="#4단계-빌드하고-테스트">4단계. 빌드하고 테스트</a></li><li class="lv2"><a href="#5단계-커밋과-업로드">5단계. 커밋과 업로드</a></li><li class="lv2"><a href="#6단계-리뷰-요청">6단계. 리뷰 요청</a></li></ul></div></details>
     <h1 class="page-title">코드 카드 (집에서)</h1>
     <div class="prose">
-<p>문서 카드를 끝내고 더 해 보고 싶은 분을 위한 카드입니다. Chromium의 옛 해시 함수(<code>crypto/sha2.h</code>, <code>crypto/secure_hash.h</code>)를 새 API(<code>crypto/hash.h</code>)로 바꾸는 일이고, <a href="https://issues.chromium.org/issues/372283556" target="_blank" rel="noopener">이슈 372283556</a> 아래에서 진행 중입니다. 고친 코드를 직접 빌드하고 테스트를 돌려야 해서 <strong>행사장이 아니라 집에서</strong> 합니다. 카드 목록은 <a href="cards.html#집에서-하는-코드-카드">이슈 카드</a> 아래쪽에 있습니다. 다른 종류의 코드 기여는 <a href="code-guide.html">코드 기여 가이드</a>에 난이도 순서로 정리돼 있습니다.</p>
-<h2 id="준비물">준비물<a class="anchor" href="#준비물" aria-label="이 절 링크">#</a></h2>
-<ul>
-<li>디스크 100GB 이상, 메모리 16GB 이상. 소스를 받는 데 한두 시간, 첫 빌드에 몇 시간 걸립니다.</li>
-<li>행사 때 받은 <code>src/</code>는 문서 폴더만 받은 것이라 빌드할 수 없습니다. 새로 받습니다.</li>
-<li>받는 방법은 운영체제별 공식 안내를 따릅니다: <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md" target="_blank" rel="noopener">Linux</a> · <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/mac_build_instructions.md" target="_blank" rel="noopener">macOS</a> · <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md" target="_blank" rel="noopener">Windows</a>.</li>
-</ul>
+<p>문서 카드를 끝내고 더 해 보고 싶은 분을 위한 카드입니다. Chromium의 옛 해시 함수(<code>crypto/sha2.h</code>, <code>crypto/secure_hash.h</code>)를 새 API(<code>crypto/hash.h</code>)로 바꾸는 일이고, <a href="https://issues.chromium.org/issues/372283556" target="_blank" rel="noopener">이슈 372283556</a> 아래에서 진행 중입니다. 고친 코드를 직접 빌드하고 테스트를 돌려야 해서 <strong>행사장이 아니라 집에서</strong> 합니다. 카드 목록은 <a href="cards.html#집에서-하는-코드-카드">이슈 카드</a> 아래쪽에 있습니다. 받기, 빌드, 테스트, 업로드 같은 공통 순서는 <a href="code-guide.html">코드 기여 가이드</a>에 있고, 여기에는 카드에만 해당하는 것을 적었습니다.</p>
 <h2 id="1단계-받고-빌드-준비">1단계. 받고 빌드 준비<a class="anchor" href="#1단계-받고-빌드-준비" aria-label="이 절 링크">#</a></h2>
-<p>공식 안내의 &quot;Get the code&quot;와 &quot;Setting up the build&quot;까지 합니다. <code>out/Default</code>를 만들 때 아래 세 줄을 넣으면 빌드가 빨라집니다.</p>
-<div class="code-block"><pre><code>gn args out/Default   <span class="c"># 편집기가 열리면 아래 세 줄을 넣고 저장</span></code></pre><button type="button" class="copy" data-copy="gn args out/Default">복사</button></div>
-<div class="code-block"><pre><code>is_component_build = true
-symbol_level = 0
-blink_symbol_level = 0</code></pre><button type="button" class="copy" data-copy="is_component_build = true
-symbol_level = 0
-blink_symbol_level = 0">복사</button></div>
+<p><a href="code-guide.html">코드 기여 가이드</a>의 0~3단계대로 Chromium 전체를 받고 <code>out/Default</code>를 만들어 둡니다. 디스크 100GB 이상, 받는 데 한두 시간, 첫 빌드에 몇 시간 걸립니다.</p>
 <h2 id="2단계-카드-고르기">2단계. 카드 고르기<a class="anchor" href="#2단계-카드-고르기" aria-label="이 절 링크">#</a></h2>
 <p><a href="cards.html#집에서-하는-코드-카드">이슈 카드</a>에서 하나를 골라 GitHub 카드에 &quot;제가 할게요&quot; 댓글을 남깁니다. <strong>쉬움</strong>은 안 쓰는 include 줄을 지우는 카드, <strong>보통</strong>은 옛 함수 호출 1~2곳을 바꾸는 카드입니다.</p>
 <div class="code-block"><pre><code>cd src
@@ -129,7 +117,7 @@ it's approved?">복사</button></div>
     </div>
     <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="code-guide.html"><span>이전</span>← 코드 기여 가이드</a><a class="next" href="faq.html"><span>다음</span>자주 묻는 질문 →</a></nav>
   </article>
-  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#준비물">준비물</a></li><li class="lv2"><a href="#1단계-받고-빌드-준비">1단계. 받고 빌드 준비</a></li><li class="lv2"><a href="#2단계-카드-고르기">2단계. 카드 고르기</a></li><li class="lv2"><a href="#3단계-고치기">3단계. 고치기</a></li><li class="lv2"><a href="#4단계-빌드하고-테스트">4단계. 빌드하고 테스트</a></li><li class="lv2"><a href="#5단계-커밋과-업로드">5단계. 커밋과 업로드</a></li><li class="lv2"><a href="#6단계-리뷰-요청">6단계. 리뷰 요청</a></li></ul></nav></aside>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#1단계-받고-빌드-준비">1단계. 받고 빌드 준비</a></li><li class="lv2"><a href="#2단계-카드-고르기">2단계. 카드 고르기</a></li><li class="lv2"><a href="#3단계-고치기">3단계. 고치기</a></li><li class="lv2"><a href="#4단계-빌드하고-테스트">4단계. 빌드하고 테스트</a></li><li class="lv2"><a href="#5단계-커밋과-업로드">5단계. 커밋과 업로드</a></li><li class="lv2"><a href="#6단계-리뷰-요청">6단계. 리뷰 요청</a></li></ul></nav></aside>
 </div>
 </main>
 <footer class="site-footer">

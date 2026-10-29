@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>코드 기여 가이드 | Hacktoberfest Seoul · Chromium</title>
-<meta name="description" content="문서 다음 단계. 쉬운 정리부터 한 단계씩, 일감 찾는 법과 확인 방법">
+<meta name="description" content="문서 기여와 다른 점. 전체 소스 받기, 빌드, 테스트, 포맷, 리뷰 요청">
 <meta property="og:title" content="코드 기여 가이드 | Hacktoberfest Seoul · Chromium">
-<meta property="og:description" content="문서 다음 단계. 쉬운 정리부터 한 단계씩, 일감 찾는 법과 확인 방법">
+<meta property="og:description" content="문서 기여와 다른 점. 전체 소스 받기, 빌드, 테스트, 포맷, 리뷰 요청">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/favicon.png">
@@ -34,147 +34,136 @@
   <aside class="doc-sidebar"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html" aria-current="page" class="is-active">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></aside>
   <article class="doc">
     <details class="m-only m-collapse"><summary>문서 목록</summary><div class="m-collapse-body"><div class="docs-group"><h2>가이드</h2><ul><li><a href="start.html">시작하기</a></li><li><a href="setup.html">사전 준비</a></li><li><a href="first-cl.html">첫 CL 올리기</a></li><li><a href="review.html">리뷰 받기</a></li><li><a href="troubleshooting.html">막혔을 때</a></li></ul></div><div class="docs-group"><h2>규칙</h2><ul><li><a href="rules.html">기여 규칙</a></li><li><a href="ai.html">AI 도구 정책</a></li></ul></div><div class="docs-group"><h2>이슈 카드</h2><ul><li><a href="cards.html">이슈 카드</a></li></ul></div><div class="docs-group"><h2>코드 기여</h2><ul><li><a href="code-guide.html" aria-current="page" class="is-active">코드 기여 가이드</a></li><li><a href="code.html">코드 카드 (집에서)</a></li></ul></div><div class="docs-group"><h2>참고 자료</h2><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="links.html">유용한 링크</a></li><li><a href="glossary.html">용어</a></li></ul></div></div></details>
-    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#난이도-순서">난이도 순서</a></li><li class="lv2"><a href="#공통-준비">공통 준비</a></li><li class="lv2"><a href="#단계별로-일감-찾기">단계별로 일감 찾기</a></li><li class="lv3"><a href="#2단계-안-쓰는-include-만료된-notfataluntil">2단계. 안 쓰는 include, 만료된 NotFatalUntil</a></li><li class="lv3"><a href="#3단계-헤더api-교체">3단계. 헤더·API 교체</a></li><li class="lv3"><a href="#4단계-만료-히스토그램">4단계. 만료 히스토그램</a></li><li class="lv3"><a href="#5단계-만료된-kill-switchflag">5단계. 만료된 kill switch·flag</a></li><li class="lv3"><a href="#6단계-수명과-동작을-따지는-수정">6단계. 수명과 동작을 따지는 수정</a></li><li class="lv2"><a href="#커밋-메시지">커밋 메시지</a></li><li class="lv2"><a href="#리뷰-받을-때">리뷰 받을 때</a></li></ul></div></details>
+    <details class="m-only m-collapse"><summary>목차</summary><div class="m-collapse-body toc"><ul><li class="lv2"><a href="#문서-기여와-다른-점">문서 기여와 다른 점</a></li><li class="lv2"><a href="#0단계-준비물">0단계. 준비물</a></li><li class="lv2"><a href="#1단계-전체-소스-받기">1단계. 전체 소스 받기</a></li><li class="lv2"><a href="#2단계-빌드-설정">2단계. 빌드 설정</a></li><li class="lv2"><a href="#3단계-빌드">3단계. 빌드</a></li><li class="lv2"><a href="#4단계-브랜치-만들고-고치기">4단계. 브랜치 만들고 고치기</a></li><li class="lv2"><a href="#5단계-테스트">5단계. 테스트</a></li><li class="lv2"><a href="#6단계-커밋과-업로드">6단계. 커밋과 업로드</a></li><li class="lv2"><a href="#7단계-리뷰-요청">7단계. 리뷰 요청</a></li><li class="lv2"><a href="#소스를-최신으로-맞추기">소스를 최신으로 맞추기</a></li><li class="lv2"><a href="#무엇을-고칠까">무엇을 고칠까</a></li></ul></div></details>
     <h1 class="page-title">코드 기여 가이드</h1>
     <div class="prose">
-<p>문서 링크를 고쳐 봤다면 다음은 코드입니다. Chromium에는 처음 오는 사람도 할 수 있는 정리 작업이 많습니다. 아래 순서대로 한 단계씩 올라가는 것을 권합니다. 2단계부터는 Chromium 전체를 받아 빌드해야 하므로 집에서 합니다.</p>
-<h2 id="난이도-순서">난이도 순서<a class="anchor" href="#난이도-순서" aria-label="이 절 링크">#</a></h2>
+<p>문서 기여는 <code>docs/</code> 폴더만 받아 빌드 없이 올렸습니다. 코드는 Chromium 전체를 받아 빌드하고, 바꾼 코드를 지나는 테스트를 돌린 뒤 올립니다. 아래는 <a href="first-cl.html">첫 CL 올리기</a>와 달라지는 부분만 단계별로 적은 것입니다. 시간이 오래 걸려서 집에서 합니다.</p>
+<h2 id="문서-기여와-다른-점">문서 기여와 다른 점<a class="anchor" href="#문서-기여와-다른-점" aria-label="이 절 링크">#</a></h2>
 <div class="table-wrap"><table class="stack">
 <thead>
 <tr>
-<th>단계</th>
-<th>할 일</th>
-<th>확인 방법</th>
-<th>동작 변화</th>
-<th>리뷰에서 필요한 것</th>
+<th></th>
+<th>문서 기여</th>
+<th>코드 기여</th>
 </tr>
 </thead>
 <tbody><tr>
-<td data-label="단계">1</td>
-<td data-label="할 일">문서 링크 고치기</td>
-<td data-label="확인 방법">링크 눌러 보기</td>
-<td data-label="동작 변화">없음</td>
-<td data-label="리뷰에서 필요한 것">커미터 누구나</td>
+<td data-label="">소스</td>
+<td data-label="문서 기여"><code>docs/</code>만 sparse 클론, 1분, 252MB</td>
+<td data-label="코드 기여"><code>fetch chromium</code>으로 전체, 한두 시간, 디스크 100GB 이상</td>
 </tr>
 <tr>
-<td data-label="단계">2</td>
-<td data-label="할 일">안 쓰는 include, 만료된 NotFatalUntil 인자 지우기</td>
-<td data-label="확인 방법">컴파일</td>
-<td data-label="동작 변화">없음</td>
-<td data-label="리뷰에서 필요한 것">그 폴더 OWNERS</td>
+<td data-label="">빌드</td>
+<td data-label="문서 기여">없음</td>
+<td data-label="코드 기여"><code>gn args</code>로 설정하고 <code>autoninja</code>로 빌드, 첫 빌드는 몇 시간</td>
 </tr>
 <tr>
-<td data-label="단계">3</td>
-<td data-label="할 일">헤더·API 교체</td>
-<td data-label="확인 방법">빌드와 단위 테스트</td>
-<td data-label="동작 변화">같은 결과가 나와야 함</td>
-<td data-label="리뷰에서 필요한 것">폴더 OWNERS와 API 담당자</td>
+<td data-label="">확인</td>
+<td data-label="문서 기여">링크 눌러 보기</td>
+<td data-label="코드 기여">바꾼 코드를 지나는 단위 테스트 돌리기</td>
 </tr>
 <tr>
-<td data-label="단계">4</td>
-<td data-label="할 일">만료 히스토그램 지우기</td>
-<td data-label="확인 방법">빌드와 XML presubmit</td>
-<td data-label="동작 변화">사용자에게 안 보임</td>
-<td data-label="리뷰에서 필요한 것">그 지표 담당자</td>
+<td data-label="">올리기 전</td>
+<td data-label="문서 기여">커밋 메시지 확인</td>
+<td data-label="코드 기여"><code>git cl format</code>, 테스트 통과</td>
 </tr>
 <tr>
-<td data-label="단계">5</td>
-<td data-label="할 일">만료된 kill switch·flag 지우기</td>
-<td data-label="확인 방법">빌드와 테스트</td>
-<td data-label="동작 변화">켜진 동작으로 굳어짐</td>
-<td data-label="리뷰에서 필요한 것">기능 담당자의 출시 완료 확인</td>
+<td data-label="">리뷰어</td>
+<td data-label="문서 기여">커미터 누구나, <code>docs/</code>는 OWNERS가 <code>*</code></td>
+<td data-label="코드 기여">그 폴더의 OWNERS</td>
 </tr>
 <tr>
-<td data-label="단계">6</td>
-<td data-label="할 일">수명과 동작을 따지는 수정</td>
-<td data-label="확인 방법">직접 설계한 테스트</td>
-<td data-label="동작 변화">바뀜</td>
-<td data-label="리뷰에서 필요한 것">멘토와 일대일로</td>
+<td data-label="">봇 검사</td>
+<td data-label="문서 기여">presubmit 두 개</td>
+<td data-label="코드 기여">여러 운영체제에서 빌드와 테스트</td>
 </tr>
 </tbody></table></div>
-<p>가장 큰 벽은 1단계에서 2단계로 넘어갈 때입니다. 여기서부터 전체 체크아웃과 빌드가 필요합니다. 2단계와 3단계는 <a href="code.html">코드 카드</a> 10장으로 바로 해 볼 수 있습니다.</p>
-<h2 id="공통-준비">공통 준비<a class="anchor" href="#공통-준비" aria-label="이 절 링크">#</a></h2>
+<h2 id="0단계-준비물">0단계. 준비물<a class="anchor" href="#0단계-준비물" aria-label="이 절 링크">#</a></h2>
 <ul>
-<li><strong>받기와 빌드 준비:</strong> <a href="code.html">코드 카드 안내 1단계</a>에 운영체제별 공식 안내와 빠르게 빌드하는 <code>gn args</code>가 있습니다.</li>
-<li><strong>빌드와 테스트:</strong> 바꾼 파일이 들어 있는 테스트 타깃을 빌드하고, 그 테스트만 골라 돌립니다.</li>
+<li>메모리 16GB 이상, 빈 디스크 100GB 이상을 권합니다(공식 안내 기준).</li>
+<li>Linux와 macOS가 가장 수월합니다. Windows는 Visual Studio 2026 설치가 더 필요합니다.</li>
+<li>depot_tools는 <a href="setup.html">사전 준비</a> 때 깐 것을 그대로 씁니다.</li>
+<li>행사 때 받은 <code>src/</code>는 문서만 받은 것이라 빌드할 수 없습니다. 새 폴더에 받습니다.</li>
+<li>막히면 운영체제별 공식 안내를 봅니다: <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md" target="_blank" rel="noopener">Linux</a> · <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/mac_build_instructions.md" target="_blank" rel="noopener">macOS</a> · <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md" target="_blank" rel="noopener">Windows</a></li>
 </ul>
-<div class="code-block"><pre><code>gn refs out/Default //net/cert/cert_verify_proc.cc   <span class="c"># 이 파일을 쓰는 타깃 찾기</span>
-autoninja -C out/Default net_unittests
-out/Default/net_unittests --gtest_filter='CertVerifyProc*'
+<h2 id="1단계-전체-소스-받기">1단계. 전체 소스 받기<a class="anchor" href="#1단계-전체-소스-받기" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>mkdir ~/chromium &amp;&amp; cd ~/chromium
+fetch --nohooks --no-history chromium   <span class="c"># 한두 시간 걸린다</span>
+cd src
+./build/install-build-deps.sh           <span class="c"># Linux만, 처음 한 번</span>
+gclient runhooks</code></pre><button type="button" class="copy" data-copy="mkdir ~/chromium &amp;&amp; cd ~/chromium
+fetch --nohooks --no-history chromium
+cd src
+./build/install-build-deps.sh
+gclient runhooks">복사</button></div>
+<ul>
+<li>macOS와 Windows는 <code>fetch --no-history chromium</code> 한 줄로 받고 <code>cd src</code>로 들어갑니다. <code>install-build-deps</code>와 <code>gclient runhooks</code>는 하지 않습니다.</li>
+<li><code>--no-history</code>는 예전 기록을 받지 않아 시간과 디스크를 아낍니다.</li>
+</ul>
+<h2 id="2단계-빌드-설정">2단계. 빌드 설정<a class="anchor" href="#2단계-빌드-설정" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>gn args out/Default   <span class="c"># 편집기가 열리면 아래 세 줄을 넣고 저장</span></code></pre><button type="button" class="copy" data-copy="gn args out/Default">복사</button></div>
+<div class="code-block"><pre><code>symbol_level = 0
+blink_symbol_level = 0
+v8_symbol_level = 0</code></pre><button type="button" class="copy" data-copy="symbol_level = 0
+blink_symbol_level = 0
+v8_symbol_level = 0">복사</button></div>
+<p>디버그 정보를 줄여 빌드를 빠르게 하는 설정입니다. 공식 안내의 &quot;Faster builds&quot;에 있는 방법이고, 나머지는 기본값인 디버그 빌드를 그대로 씁니다.</p>
+<h2 id="3단계-빌드">3단계. 빌드<a class="anchor" href="#3단계-빌드" aria-label="이 절 링크">#</a></h2>
+<p>브라우저 전체가 아니라 바꿀 코드의 테스트 타깃만 빌드하면 빠릅니다.</p>
+<div class="code-block"><pre><code>gn refs out/Default //net/cert/cert_verify_proc.cc       <span class="c"># 이 파일이 들어 있는 타깃 찾기</span>
+autoninja -C out/Default net_unittests                    <span class="c"># 테스트 타깃 빌드</span>
 autoninja -C out/Default ../../net/cert/cert_verify_proc.cc^   <span class="c"># 파일 하나만 컴파일</span></code></pre><button type="button" class="copy" data-copy="gn refs out/Default //net/cert/cert_verify_proc.cc
 autoninja -C out/Default net_unittests
-out/Default/net_unittests --gtest_filter='CertVerifyProc*'
 autoninja -C out/Default ../../net/cert/cert_verify_proc.cc^">복사</button></div>
 <ul>
-<li><strong>올리기 전:</strong> <code>git cl format</code>으로 모양을 맞추고, 바꾼 코드를 지나는 테스트가 통과하는지 봅니다.</li>
+<li>첫 빌드는 몇 시간 걸립니다. 다음부터는 바뀐 부분만 다시 빌드합니다.</li>
+<li>브라우저를 직접 띄워 보고 싶으면 <code>autoninja -C out/Default chrome</code>입니다. 가장 오래 걸립니다.</li>
 </ul>
-<h2 id="단계별로-일감-찾기">단계별로 일감 찾기<a class="anchor" href="#단계별로-일감-찾기" aria-label="이 절 링크">#</a></h2>
-<h3 id="2단계-안-쓰는-include-만료된-notfataluntil">2단계. 안 쓰는 include, 만료된 NotFatalUntil<a class="anchor" href="#2단계-안-쓰는-include-만료된-notfataluntil" aria-label="이 절 링크">#</a></h3>
+<h2 id="4단계-브랜치-만들고-고치기">4단계. 브랜치 만들고 고치기<a class="anchor" href="#4단계-브랜치-만들고-고치기" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>git new-branch my-fix</code></pre><button type="button" class="copy" data-copy="git new-branch my-fix">복사</button></div>
+<p>고친 뒤에는 <code>git cl format</code>으로 모양을 맞춥니다. C++은 clang-format, <code>BUILD.gn</code>은 gn format이 알아서 돌아갑니다.</p>
+<h2 id="5단계-테스트">5단계. 테스트<a class="anchor" href="#5단계-테스트" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>autoninja -C out/Default net_unittests
+out/Default/net_unittests --gtest_filter='CertVerifyProc*'</code></pre><button type="button" class="copy" data-copy="autoninja -C out/Default net_unittests
+out/Default/net_unittests --gtest_filter='CertVerifyProc*'">복사</button></div>
 <ul>
-<li><strong>include:</strong> 진행 중인 이전 작업에서 남은 파일을 찾습니다. 예를 들어 crypto/hash 이전(<a href="https://issues.chromium.org/issues/372283556" target="_blank" rel="noopener">이슈 372283556</a>)에서 옛 헤더만 남은 파일이 <a href="code.html">코드 카드</a> C1~C5입니다.</li>
-<li><strong>NotFatalUntil:</strong> <code>CHECK(조건, base::NotFatalUntil::M152)</code>는 M152부터 이미 크래시하는 CHECK라 인자만 남은 상태입니다. 지금 main의 마일스톤은 <code>chrome/VERSION</code>의 MAJOR로 봅니다(10월 29일 기준 159).</li>
+<li>바꾼 코드를 지나는 테스트를 골라 돌립니다. 테스트 이름은 같은 폴더의 <code>*_unittest.cc</code>에서 <code>TEST_F(이름, …)</code>를 보면 나옵니다.</li>
+<li>브라우저를 띄우는 테스트는 <code>browser_tests</code>, <code>content_browsertests</code>처럼 따로 있고 더 오래 걸립니다.</li>
+<li>모두 통과해야 올립니다.</li>
 </ul>
-<div class="code-block"><pre><code>git grep -n &quot;NotFatalUntil::M15[2-8]&quot; -- '*.cc' '*.h'</code></pre><button type="button" class="copy" data-copy="git grep -n &quot;NotFatalUntil::M15[2-8]&quot; -- '*.cc' '*.h'">복사</button></div>
+<h2 id="6단계-커밋과-업로드">6단계. 커밋과 업로드<a class="anchor" href="#6단계-커밋과-업로드" aria-label="이 절 링크">#</a></h2>
+<div class="code-block"><pre><code>git commit -a
+git cl upload -f --hashtag=hacktoberfest-seoul-2026</code></pre><button type="button" class="copy" data-copy="git commit -a
+git cl upload -f --hashtag=hacktoberfest-seoul-2026">복사</button></div>
 <ul>
-<li>base에 정리 스크립트(<code>base/tools/clean-up-not-fatal-until.py -m &lt;M&gt;</code>)가 있고 base OWNERS가 가끔 한꺼번에 지웁니다. 폴더 하나를 골라 <code>git log</code>로 최근 정리와 겹치지 않는지 보고 그 폴더만 정리합니다.</li>
-<li>예: <a href="https://crrev.com/c/8264232" target="_blank" rel="noopener">8264232</a> include 지우기, <a href="https://crrev.com/c/8377550" target="_blank" rel="noopener">8377550</a> quota CHECK의 M148 인자 지우기.</li>
-</ul>
-<h3 id="3단계-헤더api-교체">3단계. 헤더·API 교체<a class="anchor" href="#3단계-헤더api-교체" aria-label="이 절 링크">#</a></h3>
-<ul>
-<li>옛 API를 새 API로 옮기는 버그를 따라갑니다. 예: crypto/hash 이전(372283556), sql::Statement 시간 접근자(40176243). 버그에 붙은 머지된 CL을 보면 바꾸는 법이 정해져 있습니다.</li>
-<li>바꾼 뒤에도 결과가 같다는 것을 테스트로 확인하고, 저장 형식이나 값이 바뀌지 않는 이유를 커밋 메시지에 씁니다.</li>
-<li>예: <a href="https://crrev.com/c/8474691" target="_blank" rel="noopener">8474691</a> 손으로 하던 시간 변환을 <code>ColumnTime()</code>·<code>BindTime()</code>으로 교체.</li>
-</ul>
-<h3 id="4단계-만료-히스토그램">4단계. 만료 히스토그램<a class="anchor" href="#4단계-만료-히스토그램" aria-label="이 절 링크">#</a></h3>
-<ul>
-<li>히스토그램은 histograms.xml의 <code>expires_after</code>가 지나면 기록하는 코드가 죽은 코드가 됩니다. <a href="https://chromium.googlesource.com/chromium/src/+/main/tools/metrics/histograms/README.md" target="_blank" rel="noopener">히스토그램 README</a>에 만료되면 기록 코드를 지우고 XML도 정리하라고 적혀 있습니다.</li>
-</ul>
-<div class="code-block"><pre><code>git grep -nE 'expires_after=&quot;(M1[0-4][0-9]|202[0-4]-)' -- tools/metrics/histograms/metadata/   <span class="c"># 오래전에 만료된 것</span></code></pre><button type="button" class="copy" data-copy="git grep -nE 'expires_after=&quot;(M1[0-4][0-9]|202[0-4]-)' -- tools/metrics/histograms/metadata/">복사</button></div>
-<ul>
-<li>일부러 만료시켜 두고 코드를 남긴 것은 XML에 표시가 있으니 건너뜁니다. 기록하는 코드, XML 항목, 그 히스토그램만 쓰던 enum을 함께 지웁니다.</li>
-<li>예: <a href="https://crrev.com/c/8505716" target="_blank" rel="noopener">8505716</a> 만료된 Arc.NearbyShare 히스토그램 6개 지우기.</li>
-</ul>
-<h3 id="5단계-만료된-kill-switchflag">5단계. 만료된 kill switch·flag<a class="anchor" href="#5단계-만료된-kill-switchflag" aria-label="이 절 링크">#</a></h3>
-<ul>
-<li>kill switch는 새 동작을 켜 두면서 문제가 생기면 끌 수 있게 남긴 스위치입니다. 정해 둔 마일스톤이 지나고 기본값으로 켜져 있으면 스위치를 지우고 켜진 동작만 남깁니다.</li>
-<li>&quot;M1xx 뒤에 지운다&quot; 같은 주석이나, <code>chrome/browser/flag-metadata.json</code>에서 <code>expiry_milestone</code>이 지난 flag를 찾습니다. flag를 지우는 법은 <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/flag_expiry.md" target="_blank" rel="noopener">flag 만료 문서</a>에 있습니다.</li>
-</ul>
-<div class="code-block"><pre><code>git grep -nEi '(remove|delete)[^.]{0,40}(after|once|in|by) M1[0-5][0-9]' -- '*.cc' '*.h'</code></pre><button type="button" class="copy" data-copy="git grep -nEi '(remove|delete)[^.]{0,40}(after|once|in|by) M1[0-5][0-9]' -- '*.cc' '*.h'">복사</button></div>
-<ul>
-<li>지우기 전에 기능 담당자에게 출시가 끝났는지 먼저 묻습니다. 서버 쪽 실험으로 아직 끄고 있을 수 있어서, 밖에서는 알 수 없습니다.</li>
-<li>예: <a href="https://crrev.com/c/8457502" target="_blank" rel="noopener">8457502</a> M133 뒤에 지우기로 했던 FFmpeg kill switch 지우기.</li>
-</ul>
-<h3 id="6단계-수명과-동작을-따지는-수정">6단계. 수명과 동작을 따지는 수정<a class="anchor" href="#6단계-수명과-동작을-따지는-수정" aria-label="이 절 링크">#</a></h3>
-<ul>
-<li>정해진 방법이 없습니다. 호출부를 모두 읽고 불변식을 증명하거나, 오류 처리와 테스트를 직접 설계해야 합니다. 리뷰도 여러 번 오갑니다.</li>
-<li>예: <a href="https://crrev.com/c/8278112" target="_blank" rel="noopener">8278112</a> WeakPtr를 확인하던 DCHECK를 CHECK로, <a href="https://crrev.com/c/8282239" target="_blank" rel="noopener">8282239</a> QuotaDatabase를 scoped <code>sql::Transaction</code>으로.</li>
-<li>5단계까지 해 본 뒤 멘토와 일대일로 고르는 것을 권합니다.</li>
-</ul>
-<h2 id="커밋-메시지">커밋 메시지<a class="anchor" href="#커밋-메시지" aria-label="이 절 링크">#</a></h2>
-<p>코드 CL에는 무엇을 왜 바꿨는지, 동작이 바뀌지 않는다면 그 근거를 씁니다.</p>
-<div class="code-block"><pre><code>[storage] Remove expired NotFatalUntil::M148 from quota CHECKs
-
-M148 is long past, so the argument no longer has any effect.
-
-Bug: none</code></pre><button type="button" class="copy" data-copy="[storage] Remove expired NotFatalUntil::M148 from quota CHECKs
-M148 is long past, so the argument no longer has any effect.
-Bug: none">복사</button></div>
-<ul>
+<li>커밋 메시지 양식은 <a href="first-cl.html">첫 CL 올리기 4단계</a>와 같습니다. 본문에는 무엇을 왜 바꿨는지, 동작이 바뀌지 않는다면 그 근거를 씁니다.</li>
 <li>제목 앞의 <code>[컴포넌트]</code>나 <code>폴더:</code> 접두어는 그 폴더의 최근 커밋을 따라 씁니다. <code>git log --oneline -- &lt;폴더&gt;</code>로 봅니다.</li>
 <li>관련 버그가 있으면 <code>Bug: &lt;번호&gt;</code>, 그 CL로 버그가 끝나면 <code>Fixed: &lt;번호&gt;</code>, 없으면 <code>Bug: none</code>을 씁니다.</li>
+<li>첫 기여라면 AUTHORS에 이름을 넣습니다.</li>
 </ul>
-<h2 id="리뷰-받을-때">리뷰 받을 때<a class="anchor" href="#리뷰-받을-때" aria-label="이 절 링크">#</a></h2>
+<h2 id="7단계-리뷰-요청">7단계. 리뷰 요청<a class="anchor" href="#7단계-리뷰-요청" aria-label="이 절 링크">#</a></h2>
 <ul>
-<li>그 폴더의 OWNERS가 한 명 있어야 승인이 됩니다. <code>git cl owners</code>나 Gerrit 리뷰어 칸의 OWNERS 제안으로 찾습니다.</li>
-<li>커미터가 아니면 커미터 두 명의 +1이 필요합니다. 폴더 OWNERS 한 명과, 그 이전 작업을 이끄는 사람이나 다른 OWNERS 한 명을 넣습니다.</li>
-<li>참가자 계정은 dry run도 CQ+2도 걸 수 없으니 Start Review 메시지에 부탁합니다. 예시 문장은 <a href="code.html">코드 카드 안내 6단계</a>에 있습니다.</li>
-<li>그 뒤 흐름은 <a href="review.html">리뷰 받기</a>와 같습니다.</li>
+<li>그 폴더의 OWNERS가 한 명 있어야 승인이 됩니다. <code>git cl owners</code>나 Gerrit 리뷰어 칸의 OWNERS 제안으로 찾습니다. 커미터가 아니면 커미터 두 명의 +1이 필요합니다.</li>
+<li>코드 CL은 봇이 여러 운영체제에서 빌드와 테스트를 돌려 봐야 합니다. 참가자 계정은 dry run도 CQ+2도 걸 수 없으니 Start Review 메시지에 부탁합니다.</li>
 </ul>
+<div class="code-block"><pre><code>I don't have try job access, so could you start a CQ dry run, and
+Submit to CQ once it's approved?</code></pre><button type="button" class="copy" data-copy="I don't have try job access, so could you start a CQ dry run, and
+Submit to CQ once it's approved?">복사</button></div>
+<ul>
+<li>dry run에서 다른 운영체제 빌드나 테스트가 깨지면 고쳐서 새 패치셋을 올립니다. 그 뒤 흐름은 <a href="review.html">리뷰 받기</a>와 같습니다.</li>
+</ul>
+<h2 id="소스를-최신으로-맞추기">소스를 최신으로 맞추기<a class="anchor" href="#소스를-최신으로-맞추기" aria-label="이 절 링크">#</a></h2>
+<p>며칠 지나 다시 작업할 때는 먼저 이 두 줄을 돌리고 다시 빌드합니다.</p>
+<div class="code-block"><pre><code>git rebase-update   <span class="c"># main을 받아 내 브랜치를 그 위로 옮긴다</span>
+gclient sync        <span class="c"># 의존 저장소도 맞춘다</span></code></pre><button type="button" class="copy" data-copy="git rebase-update
+gclient sync">복사</button></div>
+<h2 id="무엇을-고칠까">무엇을 고칠까<a class="anchor" href="#무엇을-고칠까" aria-label="이 절 링크">#</a></h2>
+<p>연습할 일감은 <a href="code.html">코드 카드</a> 10장입니다. 그 밖의 일감은 멘토와 상의해서 고릅니다.</p>
 
     </div>
     <nav class="pager" aria-label="이전 다음 문서"><a class="prev" href="cards.html"><span>이전</span>← 이슈 카드</a><a class="next" href="code.html"><span>다음</span>코드 카드 (집에서) →</a></nav>
   </article>
-  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#난이도-순서">난이도 순서</a></li><li class="lv2"><a href="#공통-준비">공통 준비</a></li><li class="lv2"><a href="#단계별로-일감-찾기">단계별로 일감 찾기</a></li><li class="lv3"><a href="#2단계-안-쓰는-include-만료된-notfataluntil">2단계. 안 쓰는 include, 만료된 NotFatalUntil</a></li><li class="lv3"><a href="#3단계-헤더api-교체">3단계. 헤더·API 교체</a></li><li class="lv3"><a href="#4단계-만료-히스토그램">4단계. 만료 히스토그램</a></li><li class="lv3"><a href="#5단계-만료된-kill-switchflag">5단계. 만료된 kill switch·flag</a></li><li class="lv3"><a href="#6단계-수명과-동작을-따지는-수정">6단계. 수명과 동작을 따지는 수정</a></li><li class="lv2"><a href="#커밋-메시지">커밋 메시지</a></li><li class="lv2"><a href="#리뷰-받을-때">리뷰 받을 때</a></li></ul></nav></aside>
+  <aside class="doc-toc"><nav class="toc" aria-label="목차"><h2>목차</h2><ul><li class="lv2"><a href="#문서-기여와-다른-점">문서 기여와 다른 점</a></li><li class="lv2"><a href="#0단계-준비물">0단계. 준비물</a></li><li class="lv2"><a href="#1단계-전체-소스-받기">1단계. 전체 소스 받기</a></li><li class="lv2"><a href="#2단계-빌드-설정">2단계. 빌드 설정</a></li><li class="lv2"><a href="#3단계-빌드">3단계. 빌드</a></li><li class="lv2"><a href="#4단계-브랜치-만들고-고치기">4단계. 브랜치 만들고 고치기</a></li><li class="lv2"><a href="#5단계-테스트">5단계. 테스트</a></li><li class="lv2"><a href="#6단계-커밋과-업로드">6단계. 커밋과 업로드</a></li><li class="lv2"><a href="#7단계-리뷰-요청">7단계. 리뷰 요청</a></li><li class="lv2"><a href="#소스를-최신으로-맞추기">소스를 최신으로 맞추기</a></li><li class="lv2"><a href="#무엇을-고칠까">무엇을 고칠까</a></li></ul></nav></aside>
 </div>
 </main>
 <footer class="site-footer">
